@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Cloudinary media library integration (configure your credentials in Netlify dashboard)
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: YOUR_CLOUD_NAME
+#     api_key: YOUR_API_KEY
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "SKU", name: "sku", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Conveyor Systems"
+          - "Hydraulic Equipment"
+          - "Pneumatic Tools"
+          - "CNC Machinery"
+          - "Welding Equipment"
+          - "Material Handling"
+          - "Pumps & Compressors"
+          - "Power Transmission"
+          - "Safety Equipment"
+          - "Other"
+      - label: "Product Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - { label: "Description", name: "body", widget: "markdown" }
+      - label: "Technical Specifications"
+        name: "specs"
+        widget: "list"
+        summary: "{{fields.spec}}"
+        field:
+          label: "Spec"
+          name: "spec"
+          widget: "string"
+      - label: "WhatsApp Number"
+        name: "whatsapp_number"
+        widget: "string"
+        hint: "Include country code, e.g. +6281234567890"
