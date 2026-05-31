@@ -1,22 +1,33 @@
 ---
-title: "Industrial Air Compressor 75 kW Screw Type"
-sku: "COMP-SCR-75KW"
-category: "Pumps & Compressors"
-image: "https://images.unsplash.com/photo-1586864387789-628af9feed72?w=800&q=80"
-whatsapp_number: "+6281234567890"
-specs:
-  - "Motor Power: 75 kW (100 HP)"
-  - "Free Air Delivery: 12.5 m³/min"
-  - "Working Pressure: 7.5 – 13 bar (adjustable)"
-  - "Drive Type: Direct Belt Drive"
-  - "Noise Level: ≤72 dB(A)"
-  - "Cooling Method: Air-cooled"
-  - "Lubricant Capacity: 18 L"
-  - "Dimensions (L×W×H): 2,200 × 1,000 × 1,750 mm"
-  - "Weight: 1,050 kg"
-  - "IP Rating: IP23"
+title: SPINER PENIRIS MINYAK
+sku: SPN-50X60-SS
+category: Power Transmission
+image: /uploads/1716478222121.jpg
+specs: []
+whatsapp_number: "+6281222397424"
 ---
 
-The COMP-SCR-75KW rotary screw air compressor is engineered for continuous-duty industrial applications demanding consistent, high-volume compressed air. Its twin-screw element provides smooth, pulsation-free airflow ideal for pneumatic tools, automation systems, and paint lines.
 
-The integrated microprocessor controller monitors pressure, temperature, and maintenance intervals, alerting operators before issues arise. Energy-saving variable pressure settings reduce electricity consumption during low-demand periods.
+**MESIN SPINNER PENIRIS MINYAK TABUNG 50 x 60 CM**
+
+Mesin Spinner Peniris Minyak merupakan alat yang dirancang untuk mengurangi kadar minyak berlebih pada berbagai jenis makanan dan snack setelah proses penggorengan. Dengan sistem putaran sentrifugal, minyak dapat ditiriskan secara efektif sehingga menghasilkan produk yang lebih renyah, higienis, dan berkualitas.
+
+**Spesifikasi:**
+
+* Ukuran Tabung: 50 x 60 cm
+* Material Tabung: Stainless Steel
+* Material Rangka: Besi Kokoh
+* Sistem Kerja: Putaran Sentrifugal (Spinner)
+* Ukuran: Dapat disesuaikan (Custom sesuai kebutuhan)
+
+**Keunggulan:**
+
+* Mengurangi kadar minyak secara cepat dan efektif.
+* Membuat snack lebih renyah dan menarik.
+* Membantu mencegah bau tengik akibat minyak berlebih.
+* Memperpanjang masa simpan produk.
+* Cocok untuk berbagai jenis makanan seperti keripik, kerupuk, bawang goreng, makaroni, stik, dan aneka snack lainnya.
+* Konstruksi kuat dan awet untuk penggunaan usaha maupun industri.
+* Tersedia layanan custom ukuran sesuai kebutuhan produksi.
+
+Mesin spinner ini sangat cocok digunakan oleh pelaku UMKM, industri rumahan, hingga skala produksi yang membutuhkan hasil penirisan minyak yang optimal untuk meningkatkan kualitas produk dan daya saing di pasaran.
