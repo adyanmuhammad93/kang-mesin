@@ -1,9 +1,15 @@
 ---
 title: Dough Mixer (Mesin Mixer Adonan)
 sku: DM-50-SS
-category: Power Transmission
+category: Mesin Mixer / Pengaduk
 image: /uploads/screenshot_20240925-112223.jpg
-specs: []
+specs:
+  - "Material Utama: Stainless Steel"
+  - "Rangka: Besi kuat dan kokoh"
+  - "Sistem Pengaduk: Efisien untuk berbagai adonan"
+  - "Penggerak: Motor listrik / dinamo"
+  - "Kapasitas: Custom sesuai kebutuhan"
+meta_description: "Dough mixer stainless untuk mengaduk adonan pangsit, mie, dimsum, kulit siomay, pastel, roti, dan aneka produk berbahan tepung."
 whatsapp_number: "+6281222397424"
 ---
 

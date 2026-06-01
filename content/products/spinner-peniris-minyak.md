@@ -1,9 +1,15 @@
 ---
-title: SPINER PENIRIS MINYAK
+title: Spinner Peniris Minyak
 sku: SPN-50X60-SS
-category: Power Transmission
+category: Mesin Pengolahan Snack
 image: /uploads/1716478222121.jpg
-specs: []
+specs:
+  - "Ukuran Tabung: 50 x 60 cm"
+  - "Material Tabung: Stainless Steel"
+  - "Material Rangka: Besi kokoh"
+  - "Sistem Kerja: Putaran sentrifugal"
+  - "Ukuran: Custom sesuai kebutuhan"
+meta_description: "Spinner peniris minyak stainless untuk mengurangi minyak pada keripik, snack, bawang goreng, dan makanan goreng agar lebih renyah dan tahan lama."
 whatsapp_number: "+6281222397424"
 ---
 

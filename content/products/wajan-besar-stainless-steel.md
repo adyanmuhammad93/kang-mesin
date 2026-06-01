@@ -1,9 +1,16 @@
 ---
-title: Wajan Besar Stanless
+title: Wajan Besar Stainless Steel
 sku: WB-115-SS
-category: Other
+category: Peralatan Produksi Makanan
 image: /uploads/fb_img_1750116961111.jpg
 whatsapp_number: "+6281222397424"
+specs:
+  - "Material: Stainless Steel"
+  - "Tebal Wajan: 2,3 mm"
+  - "Jenis: Wajan industri"
+  - "Fungsi: Penggorengan dan pengolahan makanan"
+  - "Kapasitas: Custom sesuai kebutuhan"
+meta_description: "Wajan besar stainless steel untuk penggorengan industri, produksi keripik, snack, catering, UMKM, dan pengolahan makanan skala besar."
 ---
 
 
