@@ -1,21 +1,45 @@
 ---
-title: "Industrial Hydraulic Press 200T"
-sku: "HYD-PRESS-200T"
-category: "Hydraulic Equipment"
-image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80"
-whatsapp_number: "+6281234567890"
-specs:
-  - "Press Force: 200 Tonnes"
-  - "Table Size: 1,000 × 800 mm"
-  - "Stroke Length: 500 mm"
-  - "Daylight: 1,200 mm"
-  - "Operating Pressure: 250 bar"
-  - "Motor Power: 22 kW"
-  - "Pump Flow: 60 L/min"
-  - "Precision: ±0.1 mm"
-  - "Certification: CE, ISO 9001"
+title: Mesin Pengaduk Bumbu
+sku: PB-15-SS
+category: Power Transmission
+image: /uploads/screenshot_20240901-160839-1.jpg
+specs: []
+whatsapp_number: "+6281222397424"
 ---
 
-The HYD-PRESS-200T is a high-precision, 200-tonne hydraulic press designed for heavy stamping, forming, and assembly operations. Built for metal fabrication, automotive, and aerospace industries, it combines massive force with surgical accuracy.
 
-The advanced PLC control system allows programmable pressure profiles and stroke sequences, enabling repeatable results across high-volume production runs. Safety features include dual palm controls, light curtain integration, and overload protection.
+**MESIN SEASONING MIXER / MESIN PENGADUK BUMBU OTOMATIS**
+
+Mesin Seasoning Mixer adalah mesin yang digunakan untuk mencampurkan bumbu dengan makanan atau snack secara merata dan otomatis. Mesin ini sangat cocok digunakan pada industri makanan ringan seperti keripik, makaroni, kerupuk, kacang, dan berbagai jenis snack lainnya.
+
+Dengan sistem putaran khusus, mesin ini memastikan bumbu tercampur secara sempurna tanpa merusak bentuk produk, sehingga hasil akhir lebih merata, enak, dan menarik.
+
+**Keunggulan Produk:**
+
+* Mencampur bumbu secara merata dan konsisten.
+* Tidak merusak bentuk snack saat proses pencampuran.
+* Proses lebih cepat dibandingkan cara manual.
+* Cocok untuk bumbu kering maupun bumbu cair.
+* Meningkatkan efisiensi produksi dan kualitas rasa.
+* Mudah dioperasikan dan dibersihkan.
+
+**Spesifikasi Umum:**
+
+* Material utama: Stainless Steel food grade
+* Sistem putaran otomatis (motor penggerak)
+* Desain drum khusus untuk pencampuran bumbu
+* Rangka mesin kuat dan tahan lama
+* Kapasitas dapat disesuaikan dengan kebutuhan produksi
+
+**Aplikasi:**
+
+* Keripik singkong / kentang
+* Makaroni goreng
+* Kerupuk
+* Kacang-kacangan
+* Snack ringan lainnya
+
+**Custom Tersedia**
+Mesin dapat dibuat sesuai kebutuhan kapasitas dan desain produksi Anda. Menggunakan material stainless steel yang higienis, tahan karat, dan aman untuk industri makanan.
+
+Mesin ini sangat membantu meningkatkan kualitas produk snack agar lebih merata dalam rasa dan tampilan, sehingga lebih disukai konsumen.
