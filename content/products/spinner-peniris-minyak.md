@@ -4,13 +4,16 @@ sku: SPN-50X60-SS
 category: Mesin Pengolahan Makanan Ringan
 images:
   - /uploads/1716478222121.jpg
+  - /uploads/1696505640169.jpg
+meta_description: Mesin peniris minyak baja nirkarat untuk mengurangi minyak
+  pada keripik, makanan ringan, bawang goreng, dan makanan goreng agar lebih
+  renyah dan tahan lama.
 specs:
   - "Ukuran Tabung: 50 x 60 cm"
   - "Material Tabung: Baja Nirkarat"
   - "Material Rangka: Besi kokoh"
   - "Sistem Kerja: Putaran sentrifugal"
   - "Ukuran: Kustom sesuai kebutuhan"
-meta_description: "Mesin peniris minyak baja nirkarat untuk mengurangi minyak pada keripik, makanan ringan, bawang goreng, dan makanan goreng agar lebih renyah dan tahan lama."
 whatsapp_number: "+6281222397424"
 ---
 
