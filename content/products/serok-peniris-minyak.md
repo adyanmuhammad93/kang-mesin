@@ -4,6 +4,7 @@ sku: Sr-80-ss
 category: Lainnya
 images:
   - /uploads/1700690307331.jpg
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 

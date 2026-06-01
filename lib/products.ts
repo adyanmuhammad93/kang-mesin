@@ -6,6 +6,7 @@ export interface ProductData {
   title: string;
   sku: string;
   category: string;
+  price?: string;
   image: string;
   images: string[];
   specs: string[];
@@ -534,6 +535,7 @@ export function getProducts(): Product[] {
           title: data.title ?? "",
           sku: data.sku ?? "",
           category: data.category ?? "",
+          price: typeof data.price === "string" ? data.price : "",
           image: images.image,
           images: images.images,
           specs: data.specs ?? [],
@@ -587,6 +589,12 @@ export function getSiteSettings(): SiteSettings {
   const { data } = matter(raw);
 
   return normalizeSiteSettings(data);
+}
+
+export function formatProductPrice(price?: string) {
+  const cleanPrice = typeof price === "string" ? price.trim() : "";
+
+  return cleanPrice || "Hubungi untuk harga";
 }
 
 export function createWhatsAppUrl(number: string, message: string) {

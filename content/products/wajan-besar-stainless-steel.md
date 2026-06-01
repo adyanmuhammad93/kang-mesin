@@ -4,6 +4,7 @@ sku: WB-115-SS
 category: Peralatan Produksi Makanan
 images:
   - /uploads/fb_img_1750116961111.jpg
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 specs:
   - "Material: Baja Nirkarat"

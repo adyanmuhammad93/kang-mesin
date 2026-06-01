@@ -11,6 +11,7 @@ specs:
   - "Aplikasi: Keripik, makaroni, kerupuk, kacang, dan makanan ringan"
   - "Kapasitas: Kustom sesuai kebutuhan"
 meta_description: "Mesin pengaduk bumbu otomatis baja nirkarat untuk mencampur bumbu pada keripik, makaroni, kerupuk, kacang, dan makanan ringan secara merata."
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 

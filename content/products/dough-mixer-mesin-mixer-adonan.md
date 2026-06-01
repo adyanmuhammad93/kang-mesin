@@ -11,6 +11,7 @@ specs:
   - "Penggerak: Motor listrik / dinamo"
   - "Kapasitas: Kustom sesuai kebutuhan"
 meta_description: "Mesin pengaduk adonan baja nirkarat untuk mengaduk adonan pangsit, mie, dimsum, kulit siomay, pastel, roti, dan aneka produk berbahan tepung."
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 

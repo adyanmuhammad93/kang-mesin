@@ -1,217 +1,170 @@
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import type { Metadata } from 'next'
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import {
   createMetaDescription,
+  formatProductPrice,
   getProduct,
   getProducts,
+  getSiteSettings,
   getSiteUrl,
   resolveImageUrls,
   stripMarkdown,
-} from '@/lib/products'
-import SiteHeader from '@/app/components/SiteHeader'
-import ProductGallery from './ProductGallery'
-import ProductShare from './ProductShare'
+} from "@/lib/products";
+import SiteHeader from "@/app/components/SiteHeader";
+import ProductGallery from "./ProductGallery";
+import ProductShare from "./ProductShare";
 
 export async function generateStaticParams() {
-  return getProducts().map((product) => ({ slug: product.slug }))
+  return getProducts().map((product) => ({ slug: product.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  const product = getProduct(params.slug)
-  if (!product) return { title: 'Produk Tidak Ditemukan' }
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const product = getProduct(params.slug);
+  if (!product) return { title: "Produk Tidak Ditemukan" };
 
-  const description = createMetaDescription(product)
-  const images = resolveImageUrls(product.data.images)
+  const description = createMetaDescription(product);
+  const images = resolveImageUrls(product.data.images);
 
   return {
     title: product.data.title,
     description,
-    alternates: {
-      canonical: `/products/${params.slug}`,
-    },
+    alternates: { canonical: `/products/${params.slug}` },
     openGraph: {
-      type: 'website',
-      locale: 'id_ID',
+      type: "website",
+      locale: "id_ID",
       url: `/products/${params.slug}`,
-      siteName: 'TeknoMesin',
+      siteName: "TeknoMesin",
       title: `${product.data.title} | TeknoMesin`,
       description,
       images: images.length > 0 ? images.map((image) => ({ url: image, alt: product.data.title })) : undefined,
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: `${product.data.title} | TeknoMesin`,
       description,
       images: images.length > 0 ? images : undefined,
     },
-  }
+  };
 }
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = getProduct(params.slug)
-  if (!product) notFound()
+  const product = getProduct(params.slug);
+  if (!product) notFound();
 
-  const { data, content } = product
-  const whatsappUrl = `https://wa.me/${data.whatsapp_number.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
-    `Halo, saya tertarik dengan produk ${data.title}`
-  )}`
+  const { data, content } = product;
+  const settings = getSiteSettings();
+  const whatsappUrl = `https://wa.me/${data.whatsapp_number.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
+    `Halo, saya tertarik dengan produk ${data.title}`,
+  )}`;
 
-  const description = createMetaDescription(product)
-  const productUrl = `${getSiteUrl()}/products/${params.slug}`
-  const imageUrls = resolveImageUrls(data.images)
+  const description = createMetaDescription(product);
+  const productUrl = `${getSiteUrl()}/products/${params.slug}`;
+  const imageUrls = resolveImageUrls(data.images);
   const productJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
+    "@context": "https://schema.org",
+    "@type": "Product",
     name: data.title,
     description,
     sku: data.sku,
     category: data.category,
     image: imageUrls.length > 0 ? imageUrls : undefined,
-    brand: {
-      '@type': 'Brand',
-      name: 'TeknoMesin',
-    },
+    offers: data.price
+      ? {
+          "@type": "Offer",
+          priceCurrency: "IDR",
+          availability: "https://schema.org/InStock",
+          url: productUrl,
+        }
+      : undefined,
+    brand: { "@type": "Brand", name: "TeknoMesin" },
     url: productUrl,
-  }
+  };
 
   const paragraphs = content
-    .split('\n\n')
+    .split("\n\n")
     .map((paragraph) => stripMarkdown(paragraph.trim()))
-    .filter(Boolean)
+    .filter(Boolean);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
       <SiteHeader />
 
-      <div className="border-b border-industrial-100 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-sm text-industrial-500 sm:px-6">
-          <Link href="/" className="font-medium hover:text-accent-600">Katalog</Link>
+      <div className="border-b border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-sm text-slate-500 sm:px-6">
+          <Link href="/" className="font-bold hover:text-primary-600">Katalog</Link>
           <span aria-hidden="true">/</span>
-          <span className="truncate text-industrial-800">{data.title}</span>
+          <span className="truncate text-slate-800">{data.title}</span>
         </div>
       </div>
 
-      <main id="main-content" className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Gambar Produk */}
-          <div className="lg:sticky lg:top-24">
+      <main id="main-content" className="bg-slate-50">
+        <section className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:py-14">
+          <div className="lg:sticky lg:top-24 lg:self-start">
             <ProductGallery images={data.images} title={data.title} />
-
-            {/* Label kategori di bawah gambar */}
-            <div className="mt-4 flex items-center gap-3">
-              <span className="bg-industrial-100 text-industrial-700 text-sm font-medium px-3 py-1.5 rounded-full">
-                {data.category}
-              </span>
-              <span className="text-industrial-400 text-sm font-mono">SKU: {data.sku}</span>
-            </div>
           </div>
 
-          {/* Detail Produk */}
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-industrial-900 leading-tight mb-4">
-                {data.title}
-              </h1>
-
-              {/* Deskripsi */}
-              <div className="prose prose-slate max-w-none text-industrial-600 leading-relaxed space-y-4">
-                {paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+          <div className="space-y-6">
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+              <div className="mb-5 flex flex-wrap items-center gap-3">
+                <span className="rounded-full bg-primary-50 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-primary-700">{data.category}</span>
+                <span className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-mono font-bold text-slate-500">SKU: {data.sku}</span>
+              </div>
+              <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-950 md:text-5xl">{data.title}</h1>
+              <div className="mt-6 rounded-2xl border border-primary-100 bg-primary-50 p-5">
+                <p className="text-sm font-bold text-primary-700">Harga</p>
+                <p className="mt-1 text-3xl font-black text-primary-700">{formatProductPrice(data.price)}</p>
+                <p className="mt-2 text-sm text-slate-600">Harga dapat diubah dari CMS dan bisa disesuaikan dengan kapasitas, material, serta kebutuhan kustom.</p>
+              </div>
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600">
+                {paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
               </div>
             </div>
 
-            {/* Spesifikasi Teknis */}
             {data.specs && data.specs.length > 0 && (
-              <div>
-                <h2 className="text-xl font-bold text-industrial-900 mb-4 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
-                  Spesifikasi Teknis
-                </h2>
-                <div className="bg-industrial-50 rounded-xl border border-industrial-200 overflow-hidden">
+              <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8" aria-labelledby="spec-title">
+                <h2 id="spec-title" className="mb-5 text-xl font-extrabold text-slate-950">Spesifikasi Teknis</h2>
+                <div className="overflow-hidden rounded-2xl border border-slate-200">
                   {data.specs.map((spec, index) => {
-                    const [key, ...valueParts] = spec.split(':')
-                    const value = valueParts.join(':').trim()
+                    const [key, ...valueParts] = spec.split(":");
+                    const value = valueParts.join(":").trim();
                     return (
-                      <div
-                        key={index}
-                        className={`flex items-start gap-4 px-5 py-3.5 ${
-                          index % 2 === 0 ? 'bg-white' : 'bg-industrial-50'
-                        } ${index !== data.specs.length - 1 ? 'border-b border-industrial-100' : ''}`}
-                      >
-                        <span className="text-industrial-500 font-medium text-sm min-w-0 flex-1">
-                          {value ? key.trim() : spec}
-                        </span>
-                        {value && (
-                          <span className="text-industrial-900 font-semibold text-sm text-right flex-1">
-                            {value}
-                          </span>
-                        )}
+                      <div key={index} className={`grid gap-2 px-5 py-4 sm:grid-cols-[0.9fr_1.1fr] ${index % 2 === 0 ? "bg-white" : "bg-slate-50"} ${index !== data.specs.length - 1 ? "border-b border-slate-200" : ""}`}>
+                        <span className="text-sm font-bold text-slate-500">{value ? key.trim() : spec}</span>
+                        {value && <span className="text-sm font-extrabold text-slate-950 sm:text-right">{value}</span>}
                       </div>
-                    )
+                    );
                   })}
                 </div>
-              </div>
+              </section>
             )}
 
             <ProductShare title={data.title} url={productUrl} description={description} />
 
-            {/* Ajakan WhatsApp (sebaris untuk layar besar) */}
-            <div className="bg-gradient-to-r from-[#25D366]/10 to-[#128C7E]/10 border border-[#25D366]/30 rounded-2xl p-6">
-              <p className="text-industrial-700 font-medium mb-1">Tertarik dengan produk ini?</p>
-              <p className="text-industrial-500 text-sm mb-4">
-                Hubungi tim kami melalui WhatsApp untuk konsultasi harga, ketersediaan, dan kebutuhan kustom.
-              </p>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-8 py-3.5 rounded-xl transition-colors shadow-md shadow-green-900/20 text-base"
-              >
-                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
+            <section className="rounded-[2rem] border border-success-500/20 bg-gradient-to-br from-success-50 to-white p-6 shadow-sm md:p-8">
+              <p className="text-lg font-extrabold text-slate-950">Tertarik dengan produk ini?</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">Hubungi tim kami untuk konsultasi harga, ketersediaan, kapasitas, dan kebutuhan kustom.</p>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex rounded-xl bg-success-500 px-7 py-3.5 text-base font-black text-white shadow-lg shadow-success-500/20 transition hover:-translate-y-0.5 hover:bg-success-600">
                 Hubungi via WhatsApp
               </a>
-            </div>
+            </section>
           </div>
-        </div>
+        </section>
       </main>
 
-      {/* Tombol WhatsApp mengambang — selalu terlihat di perangkat seluler */}
       <div className="fixed bottom-6 right-6 z-50 lg:hidden">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-5 py-3.5 rounded-full shadow-2xl shadow-green-900/40 transition-all hover:scale-105 active:scale-95"
-          aria-label="Hubungi via WhatsApp"
-        >
-          <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span className="text-sm">Hubungi via WhatsApp</span>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-full bg-success-500 px-5 py-3.5 text-sm font-black text-white shadow-2xl shadow-success-500/30 transition active:scale-95" aria-label="Hubungi via WhatsApp">
+          WhatsApp
         </a>
       </div>
 
-      {/* Kaki halaman */}
-      <footer className="mt-20 bg-industrial-950 border-t border-industrial-800 py-8">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-industrial-500 text-sm">
-          <div>© {new Date().getFullYear()} TeknoMesin. Hak cipta dilindungi.</div>
-          <Link href="/" className="hover:text-white transition-colors">← Kembali ke Katalog</Link>
+      <footer className="border-t border-slate-800 bg-slate-950 py-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-sm text-slate-400 sm:px-6 md:flex-row">
+          <div>© {new Date().getFullYear()} {settings.footer_text}</div>
+          <Link href="/" className="font-semibold transition hover:text-white">← Kembali ke Katalog</Link>
         </div>
       </footer>
     </>
-  )
+  );
 }
