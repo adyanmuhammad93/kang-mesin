@@ -1,20 +1,48 @@
 ---
-title: "Heavy Duty Belt Conveyor System"
-sku: "BCS-5000-HD"
-category: "Conveyor Systems"
-image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80"
-whatsapp_number: "+6281234567890"
-specs:
-  - "Capacity: 500 kg/m"
-  - "Belt Width: 800 mm – 1,800 mm"
-  - "Belt Speed: 0.5 – 3.5 m/s (variable)"
-  - "Drive Power: 7.5 – 75 kW"
-  - "Operating Temperature: -20°C to +80°C"
-  - "Frame Material: Structural Steel (S355)"
-  - "Belt Material: EP/NN Rubber, Food-grade optional"
-  - "IP Rating: IP54"
+title: Mesin Cooker Mixer Otomatis
+sku: MCMO-80-SS
+category: Power Transmission
+image: /uploads/1716812286805.jpg
+specs: []
+whatsapp_number: "+6281222397424"
 ---
 
-The BCS-5000-HD Heavy Duty Belt Conveyor System is engineered for continuous bulk material transport in demanding industrial environments. Ideal for mining, aggregate, cement, and port operations, this conveyor delivers unmatched reliability and throughput.
 
-Featuring a robust structural steel frame and high-tensile belt, it handles abrasive and heavy materials with ease. The variable speed drive allows precise control over material flow, adapting to process demands. Low-maintenance sealed bearings and modular design reduce downtime and simplify servicing.
+**MESIN COOKER MIXER / MESIN PEMASAK & PENGADUK DODOL OTOMATIS**
+
+Mesin Cooker Mixer adalah mesin industri makanan yang berfungsi untuk memasak sekaligus mengaduk bahan secara otomatis dalam satu proses kerja. Mesin ini sangat cocok digunakan untuk produksi skala besar seperti dodol, jenang, gula merah cair,gula semut, selai, karamel, sambal, dan berbagai adonan kental lainnya.
+
+Dengan sistem pengadukan otomatis dan pemanasan terkontrol, mesin ini mampu menjaga bahan agar tidak gosong di dasar tabung serta menghasilkan tekstur yang lebih merata dan berkualitas.
+
+**Keunggulan Produk:**
+
+* Proses memasak dan mengaduk berjalan otomatis tanpa perlu diaduk manual.
+* Menghemat tenaga kerja dan meningkatkan efisiensi produksi.
+* Hasil masakan lebih merata, tidak gosong, dan konsisten.
+* Cocok untuk produksi skala UMKM hingga industri besar.
+* Mengurangi risiko kelelahan operator karena proses kerja lebih ringan.
+* Mudah dioperasikan dan perawatan sederhana.
+
+**Spesifikasi Umum:**
+
+* Material utama: Stainless Steel food grade
+* Sistem pengadukan otomatis (motor penggerak)
+* Sistem pemanasan dapat menggunakan gas, Kayu bakar 
+* Rangka mesin kuat dan tahan lama
+* Kapasitas dapat disesuaikan dengan kebutuhan produksi
+
+**Aplikasi:**
+
+* Dodol
+* Jenang
+* Gula merah cair
+* Gula Semut
+* Selai buah
+* Karamel
+* Sambal dan bumbu kental
+* Olahan makanan kental lainnya
+
+**Custom Order Tersedia**
+Mesin dapat dibuat sesuai kebutuhan kapasitas, sistem pemanas, serta desain yang diinginkan. Semua unit menggunakan material stainless steel sehingga higienis, tahan karat, dan aman untuk industri makanan.
+
+Dengan Mesin Cooker Mixer Otomatis, proses produksi menjadi lebih cepat, efisien, dan menghasilkan produk berkualitas tinggi secara konsisten.
