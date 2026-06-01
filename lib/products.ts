@@ -90,14 +90,14 @@ export function getProduct(slug: string) {
 }
 
 export function createCategoryDescription(categoryName: string, productCount: number) {
-  return `Temukan ${productCount} pilihan ${categoryName.toLowerCase()} dari TeknoMesin untuk kebutuhan produksi makanan UMKM hingga industri, dengan opsi custom sesuai kapasitas usaha.`
+  return `Temukan ${productCount} pilihan ${categoryName.toLowerCase()} dari TeknoMesin untuk kebutuhan produksi makanan UMKM hingga industri, dengan opsi kustom sesuai kapasitas usaha.`
 }
 
 export function getCategories(): ProductCategory[] {
   const categoryMap = new Map<string, Product[]>()
 
   getProducts().forEach((product) => {
-    const category = product.data.category || 'Other'
+    const category = product.data.category || 'Lainnya'
     categoryMap.set(category, [...(categoryMap.get(category) ?? []), product])
   })
 

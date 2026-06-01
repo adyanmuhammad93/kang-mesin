@@ -88,7 +88,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
-      {/* Navigation */}
+      {/* Navigasi */}
       <header className="bg-industrial-950 text-white sticky top-0 z-40 shadow-md">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4">
           <Link
@@ -107,7 +107,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
       <main className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Product Image */}
+          {/* Gambar Produk */}
           <div className="sticky top-24">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-industrial-100 shadow-xl">
               {data.image ? (
@@ -129,7 +129,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               )}
             </div>
 
-            {/* Category badge under image */}
+            {/* Label kategori di bawah gambar */}
             <div className="mt-4 flex items-center gap-3">
               <span className="bg-industrial-100 text-industrial-700 text-sm font-medium px-3 py-1.5 rounded-full">
                 {data.category}
@@ -138,14 +138,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
-          {/* Product Details */}
+          {/* Detail Produk */}
           <div className="space-y-8">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-industrial-900 leading-tight mb-4">
                 {data.title}
               </h1>
 
-              {/* Description */}
+              {/* Deskripsi */}
               <div className="prose prose-slate max-w-none text-industrial-600 leading-relaxed space-y-4">
                 {paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -188,11 +188,11 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               </div>
             )}
 
-            {/* WhatsApp CTA (inline for desktop) */}
+            {/* Ajakan WhatsApp (sebaris untuk layar besar) */}
             <div className="bg-gradient-to-r from-[#25D366]/10 to-[#128C7E]/10 border border-[#25D366]/30 rounded-2xl p-6">
               <p className="text-industrial-700 font-medium mb-1">Tertarik dengan produk ini?</p>
               <p className="text-industrial-500 text-sm mb-4">
-                Hubungi tim kami via WhatsApp untuk konsultasi harga, ketersediaan, dan kebutuhan custom.
+                Hubungi tim kami melalui WhatsApp untuk konsultasi harga, ketersediaan, dan kebutuhan kustom.
               </p>
               <a
                 href={whatsappUrl}
@@ -210,7 +210,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </div>
       </main>
 
-      {/* Floating WhatsApp CTA — always visible on mobile */}
+      {/* Tombol WhatsApp mengambang — selalu terlihat di perangkat seluler */}
       <div className="fixed bottom-6 right-6 z-50 lg:hidden">
         <a
           href={whatsappUrl}
@@ -226,10 +226,10 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </a>
       </div>
 
-      {/* Footer */}
+      {/* Kaki halaman */}
       <footer className="mt-20 bg-industrial-950 border-t border-industrial-800 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-industrial-500 text-sm">
-          <div>© {new Date().getFullYear()} TeknoMesin. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} TeknoMesin. Hak cipta dilindungi.</div>
           <Link href="/" className="hover:text-white transition-colors">← Kembali ke Katalog</Link>
         </div>
       </footer>

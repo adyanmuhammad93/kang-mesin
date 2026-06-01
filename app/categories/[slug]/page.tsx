@@ -94,7 +94,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           <div className="flex items-end justify-between gap-6 mb-8">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-industrial-900">Produk dalam kategori ini</h2>
-              <p className="text-industrial-500 mt-2">{category.products.length} produk tersedia untuk konsultasi dan custom.</p>
+              <p className="text-industrial-500 mt-2">{category.products.length} produk tersedia untuk konsultasi dan pesanan kustom.</p>
             </div>
             <Link href="/" className="hidden md:inline-flex text-accent-600 font-semibold hover:text-accent-700">
               Lihat semua produk
