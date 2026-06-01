@@ -2,7 +2,8 @@
 title: Mesin Peniris Minyak
 sku: SPN-50X60-SS
 category: Mesin Pengolahan Makanan Ringan
-image: /uploads/1716478222121.jpg
+images:
+  - /uploads/1716478222121.jpg
 specs:
   - "Ukuran Tabung: 50 x 60 cm"
   - "Material Tabung: Baja Nirkarat"

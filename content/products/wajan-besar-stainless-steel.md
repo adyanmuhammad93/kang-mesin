@@ -2,7 +2,8 @@
 title: Wajan Besar Baja Nirkarat
 sku: WB-115-SS
 category: Peralatan Produksi Makanan
-image: /uploads/fb_img_1750116961111.jpg
+images:
+  - /uploads/fb_img_1750116961111.jpg
 whatsapp_number: "+6281222397424"
 specs:
   - "Material: Baja Nirkarat"

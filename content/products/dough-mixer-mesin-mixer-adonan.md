@@ -2,7 +2,8 @@
 title: Mesin Pengaduk Adonan
 sku: DM-50-SS
 category: Mesin Pengaduk
-image: /uploads/screenshot_20240925-112223.jpg
+images:
+  - /uploads/screenshot_20240925-112223.jpg
 specs:
   - "Material Utama: Baja Nirkarat"
   - "Rangka: Besi kuat dan kokoh"

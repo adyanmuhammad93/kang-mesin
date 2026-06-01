@@ -2,7 +2,8 @@
 title: Serok /Peniris Minyak
 sku: Sr-80-ss
 category: Lainnya
-image: /uploads/1700690307331.jpg
+images:
+  - /uploads/1700690307331.jpg
 whatsapp_number: "+6281222397424"
 ---
 

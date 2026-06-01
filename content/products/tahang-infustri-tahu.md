@@ -2,7 +2,8 @@
 title: "Tahang Infustri Tahu "
 sku: TH-8090-SS
 category: Other
-image: /uploads/1696505640169.jpg
+images:
+  - /uploads/1696505640169.jpg
 whatsapp_number: "+6281222397424"
 ---
 

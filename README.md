@@ -5,7 +5,7 @@ A professional B2B industrial machinery catalog built with **Next.js 14 (App Rou
 ## Features
 
 - **Katalog Produk** — responsive grid homepage listing all machinery products with image, title, and category
-- **Halaman Detail Produk** — full product pages with large image, description, technical specification table, and WhatsApp CTA
+- **Halaman Detail Produk** — full product pages with image gallery, lightbox zoom, description, technical specification table, and WhatsApp CTA
 - **Decap CMS** — git-based headless CMS at `/admin` for managing products without code
 - **Netlify Identity** — admin authentication for CMS access
 - **Integrasi WhatsApp** — floating and inline CTA buttons linking directly to WhatsApp chat
@@ -39,4 +39,4 @@ Navigate to `/admin` to log into the CMS. You must:
 
 ## Content
 
-File Markdown produk berada di `content/products/`. Setiap file diberi nama berdasarkan slug dan berisi frontmatter: `title`, `sku`, `category`, `image`, `specs` (daftar), dan `whatsapp_number`.
+File Markdown produk berada di `content/products/`. Setiap file diberi nama berdasarkan slug dan berisi frontmatter: `title`, `sku`, `category`, `images` (daftar gambar), `specs` (daftar), dan `whatsapp_number`.
