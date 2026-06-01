@@ -36,6 +36,11 @@ collections:
           - "Mesin Baja Nirkarat Aman Pangan"
           - "Mesin Kustom"
           - "Lainnya"
+      - label: "Harga"
+        name: "price"
+        widget: "string"
+        required: false
+        hint: "Contoh: Rp 12.500.000, Mulai Rp 8.000.000, atau Hubungi untuk harga. Teks ini tampil di kartu dan halaman detail produk."
       - label: "Galeri Gambar Produk"
         name: "images"
         widget: "list"
