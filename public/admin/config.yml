@@ -67,12 +67,133 @@ collections:
   - name: "site_settings"
     label: "Pengaturan Situs"
     files:
-      - label: "SEO Beranda"
-        name: "homepage_seo"
+      - label: "Landing Page Beranda"
+        name: "homepage_landing"
         file: "content/site/settings.md"
         fields:
-          - label: "Gambar OG Beranda"
-            name: "og_image"
-            widget: "image"
-            required: false
-            hint: "Gambar default untuk pratinjau saat beranda dibagikan di WhatsApp, Facebook, atau X. Rekomendasi rasio 1200x630."
+          - label: "SEO"
+            name: "seo_section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Judul Situs"
+                name: "site_title"
+                widget: "string"
+              - label: "Deskripsi Meta Beranda"
+                name: "meta_description"
+                widget: "text"
+                hint: "Ringkasan SEO 120–160 karakter untuk hasil pencarian dan pratinjau sosial."
+              - label: "Gambar OG Beranda"
+                name: "og_image"
+                widget: "image"
+                required: false
+                hint: "Gambar default untuk pratinjau saat beranda dibagikan di WhatsApp, Facebook, atau X. Rekomendasi rasio 1200x630."
+          - label: "WhatsApp"
+            name: "whatsapp_section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Nomor WhatsApp Utama"
+                name: "whatsapp_number"
+                widget: "string"
+                hint: "Cantumkan kode negara, contoh +6281234567890."
+              - label: "Pesan Awal WhatsApp"
+                name: "whatsapp_message"
+                widget: "text"
+          - label: "Hero"
+            name: "hero_section"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Teks Kecil", name: "hero_eyebrow", widget: "string" }
+              - { label: "Judul Utama", name: "hero_title", widget: "string" }
+              - { label: "Judul Sorotan Oranye", name: "hero_highlight", widget: "string" }
+              - { label: "Deskripsi Hero", name: "hero_description", widget: "text" }
+              - { label: "Label Tombol Utama", name: "hero_primary_label", widget: "string" }
+              - { label: "Link Tombol Utama", name: "hero_primary_url", widget: "string" }
+              - { label: "Label Tombol WhatsApp", name: "hero_secondary_label", widget: "string" }
+              - label: "Poin Keunggulan Hero"
+                name: "hero_feature_points"
+                widget: "list"
+                field: { label: "Poin", name: "point", widget: "string" }
+              - { label: "Teks Kecil Kartu Produk", name: "hero_card_eyebrow", widget: "string" }
+              - { label: "Judul Kartu Produk", name: "hero_card_title", widget: "string" }
+              - { label: "Judul Badge Hero", name: "hero_badge_title", widget: "string" }
+              - { label: "Subjudul Badge Hero", name: "hero_badge_text", widget: "string" }
+          - label: "Statistik"
+            name: "landing_stats"
+            widget: "list"
+            summary: "{{fields.value}} — {{fields.label}}"
+            hint: "Gunakan {products} untuk jumlah produk dan {categories} untuk jumlah kategori otomatis."
+            fields:
+              - { label: "Angka/Nilai", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Bagian Produk"
+            name: "products_section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Teks Kecil", name: "products_eyebrow", widget: "string" }
+              - { label: "Judul", name: "products_title", widget: "string" }
+              - { label: "Deskripsi", name: "products_description", widget: "text" }
+              - { label: "Label Tombol WhatsApp", name: "products_cta_label", widget: "string" }
+          - label: "Alur Pembelian"
+            name: "order_section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Teks Kecil", name: "order_eyebrow", widget: "string" }
+              - { label: "Judul", name: "order_title", widget: "string" }
+              - label: "Langkah"
+                name: "order_steps"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Judul Langkah", name: "title", widget: "string" }
+                  - { label: "Deskripsi", name: "desc", widget: "text" }
+          - label: "Keunggulan"
+            name: "about_section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Teks Kecil", name: "about_eyebrow", widget: "string" }
+              - { label: "Judul", name: "about_title", widget: "string" }
+              - label: "Daftar Keunggulan"
+                name: "about_benefits"
+                widget: "list"
+                summary: "{{fields.icon}} {{fields.title}}"
+                fields:
+                  - { label: "Ikon Emoji", name: "icon", widget: "string" }
+                  - { label: "Judul", name: "title", widget: "string" }
+                  - { label: "Deskripsi", name: "desc", widget: "text" }
+              - label: "Kartu Info"
+                name: "about_cards"
+                widget: "list"
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "Nilai", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+          - label: "Kontak dan Footer"
+            name: "contact_section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Teks Kecil Kontak", name: "contact_eyebrow", widget: "string" }
+              - { label: "Judul Kontak", name: "contact_title", widget: "string" }
+              - { label: "Deskripsi Kontak", name: "contact_description", widget: "text" }
+              - { label: "Label Tombol Kontak", name: "contact_cta_label", widget: "string" }
+              - { label: "Teks Kecil Peta", name: "maps_eyebrow", widget: "string" }
+              - { label: "Judul Peta", name: "maps_title", widget: "string" }
+              - { label: "Deskripsi Peta", name: "maps_description", widget: "text" }
+              - label: "URL Embed Google Maps"
+                name: "maps_embed_url"
+                widget: "string"
+                required: false
+                hint: "Gunakan URL embed Google Maps, contoh https://www.google.com/maps?q=Nama%20Bisnis&output=embed. Kosongkan untuk menyembunyikan iframe peta."
+              - label: "URL Buka Google Maps"
+                name: "maps_link_url"
+                widget: "string"
+                required: false
+                hint: "Link untuk tombol buka Google Maps."
+              - { label: "Teks Copyright", name: "footer_text", widget: "string" }
+              - { label: "Tagline Footer", name: "footer_tagline", widget: "string" }
