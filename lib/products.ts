@@ -50,6 +50,10 @@ export interface LandingInfoCard {
 
 export interface SiteSettings {
   og_image: string;
+  site_name: string;
+  site_tagline: string;
+  logo_image: string;
+  favicon: string;
   site_title: string;
   meta_description: string;
   whatsapp_number: string;
@@ -89,6 +93,16 @@ export interface SiteSettings {
   maps_link_url: string;
   footer_text: string;
   footer_tagline: string;
+  theme_preset: string;
+  font_family: string;
+  primary_color: string;
+  primary_color_dark: string;
+  success_color: string;
+  background_color: string;
+  surface_color: string;
+  text_color: string;
+  card_radius: string;
+  button_radius: string;
 }
 
 const productsDir = path.join(process.cwd(), "content/products");
@@ -96,6 +110,10 @@ const siteSettingsPath = path.join(process.cwd(), "content/site/settings.md");
 
 const defaultSiteSettings: SiteSettings = {
   og_image: "/uploads/1716812295249.jpg",
+  site_name: "TeknoMesin",
+  site_tagline: "Mesin industri makanan",
+  logo_image: "",
+  favicon: "/favicon.svg",
   site_title: "TeknoMesin | Mesin Industri Makanan Kustom",
   meta_description:
     "TeknoMesin menyediakan mesin industri makanan baja nirkarat untuk UMKM dan industri, termasuk mesin pemasak-pengaduk, mesin peniris minyak, mesin pengaduk adonan, pengaduk bumbu, dan wajan kustom.",
@@ -193,6 +211,16 @@ const defaultSiteSettings: SiteSettings = {
   maps_link_url: "https://www.google.com/maps/search/?api=1&query=TeknoMesin",
   footer_text: "TeknoMesin. Hak cipta dilindungi.",
   footer_tagline: "Mesin Industri Makanan • Baja Nirkarat • Kustom",
+  theme_preset: "Ant Design Blue",
+  font_family: "Inter, system-ui, sans-serif",
+  primary_color: "#1677ff",
+  primary_color_dark: "#0958d9",
+  success_color: "#52c41a",
+  background_color: "#f5f7fa",
+  surface_color: "#ffffff",
+  text_color: "#0f172a",
+  card_radius: "1rem",
+  button_radius: "0.75rem",
 };
 
 function asRecord(value: unknown) {
@@ -281,6 +309,8 @@ function isLandingInfoCard(item: unknown): item is LandingInfoCard {
 
 function normalizeSiteSettings(data: Record<string, unknown>): SiteSettings {
   const seo = asRecord(data.seo_section);
+  const brand = asRecord(data.brand_section);
+  const design = asRecord(data.design_section);
   const whatsapp = asRecord(data.whatsapp_section);
   const hero = asRecord(data.hero_section);
   const products = asRecord(data.products_section);
@@ -292,6 +322,22 @@ function normalizeSiteSettings(data: Record<string, unknown>): SiteSettings {
     og_image: asString(
       getSettingValue(data, seo, "og_image"),
       defaultSiteSettings.og_image,
+    ),
+    site_name: asString(
+      getSettingValue(data, brand, "site_name"),
+      defaultSiteSettings.site_name,
+    ),
+    site_tagline: asString(
+      getSettingValue(data, brand, "site_tagline"),
+      defaultSiteSettings.site_tagline,
+    ),
+    logo_image: asString(
+      getSettingValue(data, brand, "logo_image"),
+      defaultSiteSettings.logo_image,
+    ),
+    favicon: asString(
+      getSettingValue(data, brand, "favicon"),
+      defaultSiteSettings.favicon,
     ),
     site_title: asString(
       getSettingValue(data, seo, "site_title"),
@@ -453,6 +499,46 @@ function normalizeSiteSettings(data: Record<string, unknown>): SiteSettings {
       getSettingValue(data, contact, "footer_tagline"),
       defaultSiteSettings.footer_tagline,
     ),
+    theme_preset: asString(
+      getSettingValue(data, design, "theme_preset"),
+      defaultSiteSettings.theme_preset,
+    ),
+    font_family: asString(
+      getSettingValue(data, design, "font_family"),
+      defaultSiteSettings.font_family,
+    ),
+    primary_color: asString(
+      getSettingValue(data, design, "primary_color"),
+      defaultSiteSettings.primary_color,
+    ),
+    primary_color_dark: asString(
+      getSettingValue(data, design, "primary_color_dark"),
+      defaultSiteSettings.primary_color_dark,
+    ),
+    success_color: asString(
+      getSettingValue(data, design, "success_color"),
+      defaultSiteSettings.success_color,
+    ),
+    background_color: asString(
+      getSettingValue(data, design, "background_color"),
+      defaultSiteSettings.background_color,
+    ),
+    surface_color: asString(
+      getSettingValue(data, design, "surface_color"),
+      defaultSiteSettings.surface_color,
+    ),
+    text_color: asString(
+      getSettingValue(data, design, "text_color"),
+      defaultSiteSettings.text_color,
+    ),
+    card_radius: asString(
+      getSettingValue(data, design, "card_radius"),
+      defaultSiteSettings.card_radius,
+    ),
+    button_radius: asString(
+      getSettingValue(data, design, "button_radius"),
+      defaultSiteSettings.button_radius,
+    ),
   };
 }
 export function stripMarkdown(content: string) {
@@ -591,11 +677,6 @@ export function getSiteSettings(): SiteSettings {
   return normalizeSiteSettings(data);
 }
 
-export function formatProductPrice(price?: string) {
-  const cleanPrice = typeof price === "string" ? price.trim() : "";
-
-  return cleanPrice || "Hubungi untuk harga";
-}
 
 export function createWhatsAppUrl(number: string, message: string) {
   const digits = number.replace(/\D/g, "");

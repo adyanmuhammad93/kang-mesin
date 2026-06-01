@@ -58,7 +58,7 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
       <button
         type="button"
         onClick={() => setIsLightboxOpen(true)}
-        className="group relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-slate-100 shadow-antd border border-slate-200 focus:outline-none focus:ring-4 focus:ring-primary-500/30"
+        className="group relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-slate-100 shadow-antd border border-slate-200 focus:outline-none focus:ring-4 focus:ring-slate-500/30"
         aria-label={`Perbesar gambar ${title}`}
       >
         <Image
@@ -69,7 +69,7 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           priority
         />
-        <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-slate-950/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition-colors group-hover:bg-primary-600">
+        <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-slate-950/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition-colors group-hover:bg-[var(--theme-primary)]">
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35m1.1-5.4a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0zM10 8v6m-3-3h6" />
           </svg>
@@ -84,10 +84,10 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
               key={`${image}-${index}`}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`relative aspect-square overflow-hidden rounded-xl border-2 bg-slate-100 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500/40 ${
+              className={`relative aspect-square overflow-hidden rounded-xl border-2 bg-slate-100 transition-all focus:outline-none focus:ring-2 focus:ring-slate-500/40 ${
                 activeIndex === index
-                  ? 'border-primary-500 shadow-md shadow-primary-500/20'
-                  : 'border-transparent opacity-75 hover:border-primary-300 hover:opacity-100'
+                  ? 'border-[var(--theme-primary)] shadow-md shadow-slate-900/10'
+                  : 'border-transparent opacity-75 hover:border-slate-300 hover:opacity-100'
               }`}
               aria-label={`Tampilkan gambar ${index + 1} dari ${images.length}`}
             >

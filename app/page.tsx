@@ -29,18 +29,18 @@ export default function HomePage() {
     <>
       <SiteHeader />
 
-      <main id="main-content" className="overflow-hidden bg-slate-50">
+      <main id="main-content" className="overflow-hidden bg-[var(--theme-background)]">
         <section className="relative bg-[radial-gradient(circle_at_top_left,#e6f4ff,transparent_34%),linear-gradient(135deg,#ffffff_0%,#f5f7fa_55%,#eef4ff_100%)]">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-300 to-transparent" />
           <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-4 py-2 text-sm font-bold text-primary-700 shadow-sm">
-                <span className="h-2 w-2 rounded-full bg-success-500" />
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white px-4 py-2 text-sm font-bold text-[var(--theme-primary-dark)] shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-[var(--theme-success)]" />
                 {settings.hero_eyebrow}
               </div>
               <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-950 md:text-6xl">
                 {settings.hero_title}
-                <span className="block bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
+                <span className="block text-[var(--theme-primary)]">
                   {settings.hero_highlight}
                 </span>
               </h1>
@@ -50,7 +50,7 @@ export default function HomePage() {
               <div className="mb-9 grid gap-3 sm:grid-cols-3">
                 {settings.hero_feature_points.map((item) => (
                   <div key={item} className="antd-card flex items-start gap-3 p-4">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-success-50 text-sm font-black text-success-600">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-success-50 text-sm font-black text-[var(--theme-success)]">
                       ✓
                     </span>
                     <span className="text-sm font-semibold text-slate-700">{item}</span>
@@ -71,13 +71,13 @@ export default function HomePage() {
             <div className="relative">
               <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-primary-200/70 blur-3xl" />
               <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-success-50 blur-3xl" />
-              <div className="relative rounded-[2rem] border border-white bg-white/80 p-4 shadow-2xl shadow-primary-900/10 backdrop-blur">
+              <div className="relative rounded-[2rem] border border-white bg-white/80 p-4 shadow-2xl shadow-slate-900/10 backdrop-blur">
                 <div className="mb-4 flex items-center justify-between gap-4 px-2 pt-2">
                   <div>
-                    <p className="text-sm font-bold text-primary-600">{settings.hero_card_eyebrow}</p>
+                    <p className="text-sm font-bold text-[var(--theme-primary)]">{settings.hero_card_eyebrow}</p>
                     <h2 className="text-2xl font-extrabold text-slate-950">{settings.hero_card_title}</h2>
                   </div>
-                  <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-primary-700">
+                  <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-bold text-[var(--theme-primary-dark)]">
                     {products.length} produk
                   </span>
                 </div>
@@ -92,16 +92,16 @@ export default function HomePage() {
                         )}
                       </div>
                       <div className="min-w-0 py-1">
-                        <p className="text-xs font-bold uppercase tracking-wide text-primary-600">{product.data.category}</p>
-                        <h3 className="mt-1 line-clamp-2 font-extrabold leading-snug text-slate-900 group-hover:text-primary-600">{product.data.title}</h3>
-                        <p className="mt-2 text-sm font-bold text-slate-700">{formatProductPrice(product.data.price)}</p>
+                        <p className="text-xs font-bold uppercase tracking-wide text-[var(--theme-primary)]">{product.data.category}</p>
+                        <h3 className="mt-1 line-clamp-2 font-extrabold leading-snug text-slate-900 group-hover:text-[var(--theme-primary)]">{product.data.title}</h3>
+                        <p className="mt-2 text-sm font-bold text-[var(--theme-primary)]">Konsultasi spesifikasi →</p>
                       </div>
                     </Link>
                   ))}
                 </div>
-                <div className="mt-4 rounded-2xl bg-gradient-to-r from-primary-600 to-primary-500 p-5 text-white shadow-lg shadow-primary-600/20">
+                <div className="mt-4 rounded-2xl bg-[var(--theme-primary)] p-5 text-white shadow-lg shadow-slate-900/10">
                   <p className="text-lg font-extrabold">{settings.hero_badge_title}</p>
-                  <p className="text-sm text-primary-100">{settings.hero_badge_text}</p>
+                  <p className="text-sm text-white/80">{settings.hero_badge_text}</p>
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function HomePage() {
             <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px px-4 sm:px-6 md:grid-cols-4">
               {landingStats.map((stat) => (
                 <div key={stat.label} className="px-4 py-6 text-center">
-                  <div className="text-3xl font-black text-primary-600">{stat.value}</div>
+                  <div className="text-3xl font-black text-[var(--theme-primary)]">{stat.value}</div>
                   <div className="mt-1 text-sm font-semibold text-slate-500">{stat.label}</div>
                 </div>
               ))}
@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-primary-600">{settings.products_eyebrow}</p>
+                <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-[var(--theme-primary)]">{settings.products_eyebrow}</p>
                 <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">{settings.products_title}</h2>
                 <p className="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">{settings.products_description}</p>
               </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
             {categories.length > 0 && (
               <div className="mb-10 flex gap-3 overflow-x-auto pb-2">
                 {categories.map((category) => (
-                  <Link key={category.slug} href={`/categories/${category.slug}`} className="shrink-0 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 shadow-sm transition hover:border-primary-300 hover:text-primary-600">
+                  <Link key={category.slug} href={`/categories/${category.slug}`} className="shrink-0 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 shadow-sm transition hover:border-primary-300 hover:text-[var(--theme-primary)]">
                     {category.name} <span className="text-slate-400">({category.products.length})</span>
                   </Link>
                 ))}
@@ -151,14 +151,14 @@ export default function HomePage() {
                     ) : (
                       <div className="flex h-full items-center justify-center text-slate-300">Tidak ada gambar</div>
                     )}
-                    <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-primary-700 shadow-sm">{product.data.category}</span>
+                    <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-[var(--theme-primary-dark)] shadow-sm">{product.data.category}</span>
                   </div>
                   <div className="p-5">
                     <p className="text-xs font-mono font-semibold text-slate-400">SKU: {product.data.sku}</p>
-                    <h3 className="mt-2 line-clamp-2 text-lg font-extrabold leading-snug text-slate-950 group-hover:text-primary-600">{product.data.title}</h3>
+                    <h3 className="mt-2 line-clamp-2 text-lg font-extrabold leading-snug text-slate-950 group-hover:text-[var(--theme-primary)]">{product.data.title}</h3>
                     <div className="mt-4 flex items-center justify-between gap-3">
-                      <p className="font-extrabold text-primary-600">{formatProductPrice(product.data.price)}</p>
-                      <span className="text-sm font-bold text-slate-500 group-hover:text-primary-600">Detail →</span>
+                      <p className="text-sm font-bold text-[var(--theme-primary)]">Konsultasi via WhatsApp</p>
+                      <span className="text-sm font-bold text-slate-500 group-hover:text-[var(--theme-primary)]">Detail →</span>
                     </div>
                   </div>
                 </Link>
@@ -170,13 +170,13 @@ export default function HomePage() {
         <section id="process" className="scroll-mt-24 bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="mb-12 text-center">
-              <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-primary-600">{settings.order_eyebrow}</p>
+              <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-[var(--theme-primary)]">{settings.order_eyebrow}</p>
               <h2 className="mx-auto max-w-3xl text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">{settings.order_title}</h2>
             </div>
             <div className="grid gap-5 md:grid-cols-4">
               {settings.order_steps.map((step, index) => (
                 <div key={step.title} className="antd-card p-6">
-                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-lg font-black text-primary-600">{index + 1}</div>
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-50 text-lg font-black text-[var(--theme-primary)]">{index + 1}</div>
                   <h3 className="text-lg font-extrabold text-slate-950">{step.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">{step.desc}</p>
                 </div>
@@ -188,12 +188,12 @@ export default function HomePage() {
         <section id="about" className="scroll-mt-24 bg-slate-50 py-20">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-primary-600">{settings.about_eyebrow}</p>
+              <p className="mb-2 text-sm font-black uppercase tracking-[0.2em] text-[var(--theme-primary)]">{settings.about_eyebrow}</p>
               <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">{settings.about_title}</h2>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {settings.about_cards.map((card) => (
                   <div key={`${card.value}-${card.label}`} className="rounded-2xl border border-primary-100 bg-white p-5 shadow-sm">
-                    <div className="text-2xl font-black text-primary-600">{card.value}</div>
+                    <div className="text-2xl font-black text-[var(--theme-primary)]">{card.value}</div>
                     <div className="mt-2 text-sm font-semibold leading-relaxed text-slate-600">{card.label}</div>
                   </div>
                 ))}
@@ -213,17 +213,17 @@ export default function HomePage() {
 
         <section id="contact" className="scroll-mt-24 bg-slate-950 py-20 text-white">
           <div className="mx-auto max-w-7xl px-4 text-center sm:px-6">
-            <p className="mb-3 text-sm font-black uppercase tracking-[0.2em] text-primary-300">{settings.contact_eyebrow}</p>
+            <p className="mb-3 text-sm font-black uppercase tracking-[0.2em] text-[var(--theme-primary)]">{settings.contact_eyebrow}</p>
             <h2 className="text-3xl font-extrabold md:text-4xl">{settings.contact_title}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-300">{settings.contact_description}</p>
-            <a href={whatsappConsultationUrl} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex rounded-xl bg-success-500 px-8 py-4 text-base font-black text-white shadow-lg shadow-success-500/20 transition hover:-translate-y-0.5 hover:bg-success-600">
+            <a href={whatsappConsultationUrl} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex rounded-xl bg-[var(--theme-success)] px-8 py-4 text-base font-black text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:brightness-95">
               {settings.contact_cta_label}
             </a>
 
             <div className="mt-14 overflow-hidden rounded-[2rem] border border-white/10 bg-white p-3 text-left shadow-2xl shadow-black/20">
               <div className="grid overflow-hidden rounded-[1.5rem] text-slate-950 lg:grid-cols-[0.8fr_1.2fr]">
                 <div className="p-8 md:p-10">
-                  <p className="mb-3 text-sm font-black uppercase tracking-[0.2em] text-primary-600">{settings.maps_eyebrow}</p>
+                  <p className="mb-3 text-sm font-black uppercase tracking-[0.2em] text-[var(--theme-primary)]">{settings.maps_eyebrow}</p>
                   <h3 className="text-2xl font-extrabold md:text-3xl">{settings.maps_title}</h3>
                   <p className="mt-4 leading-relaxed text-slate-600">{settings.maps_description}</p>
                   {settings.maps_link_url && (

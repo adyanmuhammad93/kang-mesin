@@ -21,6 +21,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const product = getProduct(params.slug);
+  const settings = getSiteSettings();
   if (!product) return { title: "Produk Tidak Ditemukan" };
 
   const description = createMetaDescription(product);
@@ -34,14 +35,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       type: "website",
       locale: "id_ID",
       url: `/products/${params.slug}`,
-      siteName: "TeknoMesin",
-      title: `${product.data.title} | TeknoMesin`,
+      siteName: settings.site_name,
+      title: `${product.data.title} | ${settings.site_name}`,
       description,
       images: images.length > 0 ? images.map((image) => ({ url: image, alt: product.data.title })) : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.data.title} | TeknoMesin`,
+      title: `${product.data.title} | ${settings.site_name}`,
       description,
       images: images.length > 0 ? images : undefined,
     },
@@ -69,15 +70,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     sku: data.sku,
     category: data.category,
     image: imageUrls.length > 0 ? imageUrls : undefined,
-    offers: data.price
-      ? {
-          "@type": "Offer",
-          priceCurrency: "IDR",
-          availability: "https://schema.org/InStock",
-          url: productUrl,
-        }
-      : undefined,
-    brand: { "@type": "Brand", name: "TeknoMesin" },
+    brand: { "@type": "Brand", name: settings.site_name },
     url: productUrl,
   };
 
@@ -93,13 +86,13 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
       <div className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-sm text-slate-500 sm:px-6">
-          <Link href="/" className="font-bold hover:text-primary-600">Katalog</Link>
+          <Link href="/" className="font-bold hover:text-[var(--theme-primary)]">Katalog</Link>
           <span aria-hidden="true">/</span>
           <span className="truncate text-slate-800">{data.title}</span>
         </div>
       </div>
 
-      <main id="main-content" className="bg-slate-50">
+      <main id="main-content" className="bg-[var(--theme-background)]">
         <section className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:py-14">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <ProductGallery images={data.images} title={data.title} />
@@ -108,14 +101,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
           <div className="space-y-6">
             <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
               <div className="mb-5 flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-primary-50 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-primary-700">{data.category}</span>
+                <span className="rounded-full bg-primary-50 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-[var(--theme-primary-dark)]">{data.category}</span>
                 <span className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-mono font-bold text-slate-500">SKU: {data.sku}</span>
               </div>
               <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-950 md:text-5xl">{data.title}</h1>
-              <div className="mt-6 rounded-2xl border border-primary-100 bg-primary-50 p-5">
-                <p className="text-sm font-bold text-primary-700">Harga</p>
-                <p className="mt-1 text-3xl font-black text-primary-700">{formatProductPrice(data.price)}</p>
-                <p className="mt-2 text-sm text-slate-600">Harga dapat diubah dari CMS dan bisa disesuaikan dengan kapasitas, material, serta kebutuhan kustom.</p>
+              <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                <p className="text-sm font-bold text-[var(--theme-primary)]">Harga & kapasitas</p>
+                <p className="mt-1 text-2xl font-black text-slate-950">Konsultasikan via WhatsApp</p>
+                <p className="mt-2 text-sm text-slate-600">Harga tidak ditampilkan agar tim bisa memberi rekomendasi sesuai kapasitas, material, dan kebutuhan kustom Anda.</p>
               </div>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-slate-600">
                 {paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
@@ -140,12 +133,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               </section>
             )}
 
-            <ProductShare title={data.title} url={productUrl} description={description} />
+            <ProductShare title={data.title} url={productUrl} description={description} siteName={settings.site_name} />
 
             <section className="rounded-[2rem] border border-success-500/20 bg-gradient-to-br from-success-50 to-white p-6 shadow-sm md:p-8">
               <p className="text-lg font-extrabold text-slate-950">Tertarik dengan produk ini?</p>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">Hubungi tim kami untuk konsultasi harga, ketersediaan, kapasitas, dan kebutuhan kustom.</p>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex rounded-xl bg-success-500 px-7 py-3.5 text-base font-black text-white shadow-lg shadow-success-500/20 transition hover:-translate-y-0.5 hover:bg-success-600">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex rounded-xl bg-[var(--theme-success)] px-7 py-3.5 text-base font-black text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:brightness-95">
                 Hubungi via WhatsApp
               </a>
             </section>
@@ -154,7 +147,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       </main>
 
       <div className="fixed bottom-6 right-6 z-50 lg:hidden">
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-full bg-success-500 px-5 py-3.5 text-sm font-black text-white shadow-2xl shadow-success-500/30 transition active:scale-95" aria-label="Hubungi via WhatsApp">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-full bg-[var(--theme-success)] px-5 py-3.5 text-sm font-black text-white shadow-2xl shadow-slate-900/20 transition active:scale-95" aria-label="Hubungi via WhatsApp">
           WhatsApp
         </a>
       </div>
