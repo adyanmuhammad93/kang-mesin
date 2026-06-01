@@ -468,6 +468,61 @@ export default function HomePage() {
               </svg>
               {settings.contact_cta_label}
             </a>
+
+            <div className="mt-14 overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-3 text-left shadow-2xl shadow-black/20 backdrop-blur">
+              <div className="grid gap-0 overflow-hidden rounded-[1.5rem] bg-white text-industrial-900 lg:grid-cols-[0.8fr_1.2fr]">
+                <div className="p-8 md:p-10">
+                  <p className="mb-3 text-sm font-bold uppercase tracking-wide text-accent-600">
+                    {settings.maps_eyebrow}
+                  </p>
+                  <h3 className="mb-4 text-2xl font-bold md:text-3xl">
+                    {settings.maps_title}
+                  </h3>
+                  <p className="mb-6 leading-relaxed text-industrial-500">
+                    {settings.maps_description}
+                  </p>
+                  {settings.maps_link_url && (
+                    <a
+                      href={settings.maps_link_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl bg-industrial-950 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-industrial-800"
+                    >
+                      Buka di Google Maps
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-6-10h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  )}
+                </div>
+                {settings.maps_embed_url ? (
+                  <iframe
+                    src={settings.maps_embed_url}
+                    title={settings.maps_title}
+                    className="min-h-[22rem] w-full border-0 lg:min-h-full"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="flex min-h-[22rem] items-center justify-center bg-industrial-100 p-8 text-center text-industrial-500">
+                    Peta akan tampil setelah URL embed Google Maps ditambahkan
+                    melalui CMS.
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </section>
       </main>

@@ -78,6 +78,11 @@ contact_section:
   contact_title: Siap Konsultasi Kebutuhan Mesin?
   contact_description: Kirim kebutuhan produksi Anda. Tim kami siap membantu merekomendasikan mesin, kapasitas, dan spesifikasi yang paling sesuai.
   contact_cta_label: Hubungi via WhatsApp
+  maps_eyebrow: Lokasi kami
+  maps_title: Temukan TeknoMesin di Google Maps
+  maps_description: Lihat lokasi kami di Google Maps atau hubungi WhatsApp untuk arahan kunjungan dan konsultasi kebutuhan mesin.
+  maps_embed_url: https://www.google.com/maps?q=TeknoMesin&output=embed
+  maps_link_url: https://www.google.com/maps/search/?api=1&query=TeknoMesin
   footer_text: TeknoMesin. Hak cipta dilindungi.
   footer_tagline: Mesin Industri Makanan • Baja Nirkarat • Kustom
 ---

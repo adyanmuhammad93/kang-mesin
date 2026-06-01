@@ -182,5 +182,18 @@ collections:
               - { label: "Judul Kontak", name: "contact_title", widget: "string" }
               - { label: "Deskripsi Kontak", name: "contact_description", widget: "text" }
               - { label: "Label Tombol Kontak", name: "contact_cta_label", widget: "string" }
+              - { label: "Teks Kecil Peta", name: "maps_eyebrow", widget: "string" }
+              - { label: "Judul Peta", name: "maps_title", widget: "string" }
+              - { label: "Deskripsi Peta", name: "maps_description", widget: "text" }
+              - label: "URL Embed Google Maps"
+                name: "maps_embed_url"
+                widget: "string"
+                required: false
+                hint: "Gunakan URL embed Google Maps, contoh https://www.google.com/maps?q=Nama%20Bisnis&output=embed. Kosongkan untuk menyembunyikan iframe peta."
+              - label: "URL Buka Google Maps"
+                name: "maps_link_url"
+                widget: "string"
+                required: false
+                hint: "Link untuk tombol buka Google Maps."
               - { label: "Teks Copyright", name: "footer_text", widget: "string" }
               - { label: "Tagline Footer", name: "footer_tagline", widget: "string" }

@@ -81,6 +81,11 @@ export interface SiteSettings {
   contact_title: string;
   contact_description: string;
   contact_cta_label: string;
+  maps_eyebrow: string;
+  maps_title: string;
+  maps_description: string;
+  maps_embed_url: string;
+  maps_link_url: string;
   footer_text: string;
   footer_tagline: string;
 }
@@ -179,6 +184,12 @@ const defaultSiteSettings: SiteSettings = {
   contact_description:
     "Kirim kebutuhan produksi Anda. Tim kami siap membantu merekomendasikan mesin, kapasitas, dan spesifikasi yang paling sesuai.",
   contact_cta_label: "Hubungi via WhatsApp",
+  maps_eyebrow: "Lokasi kami",
+  maps_title: "Temukan TeknoMesin di Google Maps",
+  maps_description:
+    "Lihat lokasi kami di Google Maps atau hubungi WhatsApp untuk arahan kunjungan dan konsultasi kebutuhan mesin.",
+  maps_embed_url: "https://www.google.com/maps?q=TeknoMesin&output=embed",
+  maps_link_url: "https://www.google.com/maps/search/?api=1&query=TeknoMesin",
   footer_text: "TeknoMesin. Hak cipta dilindungi.",
   footer_tagline: "Mesin Industri Makanan • Baja Nirkarat • Kustom",
 };
@@ -412,6 +423,26 @@ function normalizeSiteSettings(data: Record<string, unknown>): SiteSettings {
     contact_cta_label: asString(
       getSettingValue(data, contact, "contact_cta_label"),
       defaultSiteSettings.contact_cta_label,
+    ),
+    maps_eyebrow: asString(
+      getSettingValue(data, contact, "maps_eyebrow"),
+      defaultSiteSettings.maps_eyebrow,
+    ),
+    maps_title: asString(
+      getSettingValue(data, contact, "maps_title"),
+      defaultSiteSettings.maps_title,
+    ),
+    maps_description: asString(
+      getSettingValue(data, contact, "maps_description"),
+      defaultSiteSettings.maps_description,
+    ),
+    maps_embed_url: asString(
+      getSettingValue(data, contact, "maps_embed_url"),
+      defaultSiteSettings.maps_embed_url,
+    ),
+    maps_link_url: asString(
+      getSettingValue(data, contact, "maps_link_url"),
+      defaultSiteSettings.maps_link_url,
     ),
     footer_text: asString(
       getSettingValue(data, contact, "footer_text"),
