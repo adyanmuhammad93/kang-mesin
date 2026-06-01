@@ -8,7 +8,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Navigation */}
+      {/* Navigasi */}
       <header className="bg-industrial-950 text-white">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
@@ -28,9 +28,9 @@ export default function HomePage() {
         </nav>
       </header>
 
-      {/* Hero Section */}
+      {/* Bagian Hero */}
       <section className="relative bg-industrial-950 text-white overflow-hidden">
-        {/* Background pattern */}
+        {/* Pola latar belakang */}
         <div className="absolute inset-0 opacity-5">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -50,10 +50,10 @@ export default function HomePage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
               Mesin Industri Makanan
-              <span className="block text-accent-500">Custom & Siap Produksi.</span>
+              <span className="block text-accent-500">Kustom & Siap Produksi.</span>
             </h1>
             <p className="text-industrial-300 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-              Katalog mesin pengolahan makanan stainless steel untuk UMKM dan industri: cooker mixer, pengaduk bumbu, dough mixer, spinner peniris minyak, dan wajan stainless custom.
+              Katalog mesin pengolahan makanan baja nirkarat untuk UMKM dan industri: mesin pemasak-pengaduk, pengaduk bumbu, pengaduk adonan, peniris minyak, dan wajan baja nirkarat kustom.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -80,13 +80,13 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Stats bar */}
+        {/* Bilah statistik */}
         <div className="relative border-t border-industrial-800">
           <div className="max-w-7xl mx-auto px-6 py-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { value: 'Custom', label: 'Ukuran & Kapasitas' },
-                { value: 'SS', label: 'Material Food Grade' },
+                { value: 'Kustom', label: 'Ukuran & Kapasitas' },
+                { value: 'SS', label: 'Material Aman Pangan' },
                 { value: 'UMKM', label: 'hingga Industri' },
                 { value: 'WA', label: 'Konsultasi Cepat' },
               ].map((stat) => (
@@ -100,13 +100,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Produk Section */}
+      {/* Bagian Produk */}
       <section id="products" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-industrial-900 mb-3">Katalog Mesin Industri Makanan</h2>
             <p className="text-industrial-500 text-lg max-w-2xl">
-              Pilih mesin pengolahan makanan sesuai kebutuhan produksi Anda, mulai dari mesin mixer adonan, pengaduk bumbu, cooker mixer, spinner minyak, hingga wajan stainless custom.
+              Pilih mesin pengolahan makanan sesuai kebutuhan produksi Anda, mulai dari mesin pengaduk adonan, pengaduk bumbu, mesin pemasak-pengaduk, peniris minyak, hingga wajan baja nirkarat kustom.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Keunggulan / Value Props */}
+      {/* Keunggulan */}
       <section id="about" className="py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -196,8 +196,8 @@ export default function HomePage() {
                 {[
                   {
                     icon: '⚙️',
-                    title: 'Material Food Grade',
-                    desc: 'Mesin dibuat dengan material stainless steel yang higienis, kuat, dan mudah dibersihkan untuk produksi makanan.',
+                    title: 'Material Aman Pangan',
+                    desc: 'Mesin dibuat dengan material baja nirkarat yang higienis, kuat, dan mudah dibersihkan untuk produksi makanan.',
                   },
                   {
                     icon: '🔧',
@@ -206,13 +206,13 @@ export default function HomePage() {
                   },
                   {
                     icon: '🚚',
-                    title: 'Pengerjaan Custom',
+                    title: 'Pengerjaan Kustom',
                     desc: 'Ukuran, kapasitas, dan sistem kerja mesin dapat disesuaikan untuk skala UMKM hingga industri.',
                   },
                   {
                     icon: '📋',
                     title: 'Siap untuk Produksi',
-                    desc: 'Pilihan mesin untuk pengolahan snack, adonan, bumbu, dodol, selai, dan kebutuhan dapur produksi.',
+                    desc: 'Pilihan mesin untuk pengolahan makanan ringan, adonan, bumbu, dodol, selai, dan kebutuhan dapur produksi.',
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
@@ -227,7 +227,7 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-industrial-950 rounded-2xl p-6 text-white">
-                <div className="text-4xl font-extrabold text-accent-500 mb-2">Custom</div>
+                <div className="text-4xl font-extrabold text-accent-500 mb-2">Kustom</div>
                 <div className="text-industrial-300 text-sm">Pengalaman produksi mesin</div>
               </div>
               <div className="bg-accent-500 rounded-2xl p-6 text-white mt-8">
@@ -235,8 +235,8 @@ export default function HomePage() {
                 <div className="text-orange-100 text-sm">Konsultasi kebutuhan usaha</div>
               </div>
               <div className="bg-industrial-100 rounded-2xl p-6 text-industrial-900 mt-[-16px]">
-                <div className="text-4xl font-extrabold mb-2">Food</div>
-                <div className="text-industrial-500 text-sm">Mesin custom dan siap pakai</div>
+                <div className="text-4xl font-extrabold mb-2">Pangan</div>
+                <div className="text-industrial-500 text-sm">Mesin kustom dan siap pakai</div>
               </div>
               <div className="bg-industrial-800 rounded-2xl p-6 text-white">
                 <div className="text-4xl font-extrabold text-white mb-2">WA</div>
@@ -247,7 +247,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Kontak / CTA */}
+      {/* Kontak / Ajakan Bertindak */}
       <section id="contact" className="py-20 bg-industrial-950 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Siap Konsultasi Kebutuhan Mesin?</h2>
@@ -268,10 +268,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Kaki halaman */}
       <footer className="bg-industrial-950 border-t border-industrial-800 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-industrial-500 text-sm">
-          <div>© {new Date().getFullYear()} TeknoMesin. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} TeknoMesin. Hak cipta dilindungi.</div>
           <div className="flex gap-6">
             <Link href="/admin" className="hover:text-white transition-colors">Admin CMS</Link>
           </div>

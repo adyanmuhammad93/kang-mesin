@@ -1,22 +1,22 @@
 ---
-title: Mesin Cooker Mixer Otomatis
+title: Mesin Pemasak dan Pengaduk Otomatis
 sku: MCMO-80-SS
 category: Mesin Industri Makanan
 image: /uploads/1716812286805.jpg
 specs:
-  - "Material Utama: Stainless Steel food grade"
+  - "Material Utama: Baja Nirkarat aman pangan"
   - "Sistem Pengaduk: Otomatis dengan motor penggerak"
   - "Sistem Pemanas: Gas atau kayu bakar"
   - "Rangka: Kuat dan tahan lama"
-  - "Kapasitas: Custom sesuai kebutuhan"
-meta_description: "Mesin cooker mixer otomatis stainless untuk memasak dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara merata."
+  - "Kapasitas: Kustom sesuai kebutuhan"
+meta_description: "Mesin pemasak-pengaduk otomatis baja nirkarat untuk memasak dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara merata."
 whatsapp_number: "+6281222397424"
 ---
 
 
-**MESIN COOKER MIXER / MESIN PEMASAK & PENGADUK DODOL OTOMATIS**
+**MESIN PEMASAK DAN PENGADUK DODOL OTOMATIS**
 
-Mesin Cooker Mixer adalah mesin industri makanan yang berfungsi untuk memasak sekaligus mengaduk bahan secara otomatis dalam satu proses kerja. Mesin ini sangat cocok digunakan untuk produksi skala besar seperti dodol, jenang, gula merah cair,gula semut, selai, karamel, sambal, dan berbagai adonan kental lainnya.
+Mesin pemasak dan pengaduk adalah mesin industri makanan yang berfungsi untuk memasak sekaligus mengaduk bahan secara otomatis dalam satu proses kerja. Mesin ini sangat cocok digunakan untuk produksi skala besar seperti dodol, jenang, gula merah cair, gula semut, selai, karamel, sambal, dan berbagai adonan kental lainnya.
 
 Dengan sistem pengadukan otomatis dan pemanasan terkontrol, mesin ini mampu menjaga bahan agar tidak gosong di dasar tabung serta menghasilkan tekstur yang lebih merata dan berkualitas.
 
@@ -31,9 +31,9 @@ Dengan sistem pengadukan otomatis dan pemanasan terkontrol, mesin ini mampu menj
 
 **Spesifikasi Umum:**
 
-* Material utama: Stainless Steel food grade
+* Material utama: Baja Nirkarat aman pangan
 * Sistem pengadukan otomatis (motor penggerak)
-* Sistem pemanasan dapat menggunakan gas, Kayu bakar 
+* Sistem pemanasan dapat menggunakan gas, Kayu bakar
 * Rangka mesin kuat dan tahan lama
 * Kapasitas dapat disesuaikan dengan kebutuhan produksi
 
@@ -48,7 +48,7 @@ Dengan sistem pengadukan otomatis dan pemanasan terkontrol, mesin ini mampu menj
 * Sambal dan bumbu kental
 * Olahan makanan kental lainnya
 
-**Custom Order Tersedia**
-Mesin dapat dibuat sesuai kebutuhan kapasitas, sistem pemanas, serta desain yang diinginkan. Semua unit menggunakan material stainless steel sehingga higienis, tahan karat, dan aman untuk industri makanan.
+**Pesanan Kustom Tersedia**
+Mesin dapat dibuat sesuai kebutuhan kapasitas, sistem pemanas, serta desain yang diinginkan. Semua unit menggunakan material baja nirkarat sehingga higienis, tahan karat, dan aman untuk industri makanan.
 
-Dengan Mesin Cooker Mixer Otomatis, proses produksi menjadi lebih cepat, efisien, dan menghasilkan produk berkualitas tinggi secara konsisten.
+Dengan mesin pemasak dan pengaduk otomatis, proses produksi menjadi lebih cepat, efisien, dan menghasilkan produk berkualitas tinggi secara konsisten.

@@ -1,8 +1,9 @@
+locale: "id"
 backend:
   name: git-gateway
   branch: main
 
-# Cloudinary media library integration (configure your credentials in Netlify dashboard)
+# Integrasi pustaka media Cloudinary (atur kredensial di dasbor Netlify)
 # media_library:
 #   name: cloudinary
 #   config:
@@ -14,58 +15,58 @@ public_folder: "/uploads"
 
 collections:
   - name: "products"
-    label: "Products"
+    label: "Produk"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Judul", name: "title", widget: "string" }
       - { label: "SKU", name: "sku", widget: "string" }
-      - label: "Category"
+      - label: "Kategori"
         name: "category"
         widget: "select"
         options:
           - "Mesin Industri Makanan"
-          - "Mesin Pengolahan Snack"
-          - "Mesin Mixer / Pengaduk"
+          - "Mesin Pengolahan Makanan Ringan"
+          - "Mesin Pengaduk"
           - "Peralatan Produksi Makanan"
           - "Mesin UMKM"
-          - "Mesin Stainless Food Grade"
-          - "Mesin Custom"
-          - "Other"
-      - label: "Product Image"
+          - "Mesin Baja Nirkarat Aman Pangan"
+          - "Mesin Kustom"
+          - "Lainnya"
+      - label: "Gambar Produk"
         name: "image"
         widget: "image"
         required: false
-      - label: "Meta Description"
+      - label: "Deskripsi Meta"
         name: "meta_description"
         widget: "text"
         required: false
-        hint: "Ringkasan SEO 120–160 karakter untuk hasil pencarian dan social preview."
-      - { label: "Description", name: "body", widget: "markdown" }
-      - label: "Technical Specifications"
+        hint: "Ringkasan SEO 120–160 karakter untuk hasil pencarian dan pratinjau sosial."
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - label: "Spesifikasi Teknis"
         name: "specs"
         widget: "list"
         summary: "{{fields.spec}}"
         field:
-          label: "Spec"
+          label: "Spesifikasi"
           name: "spec"
           widget: "string"
-      - label: "WhatsApp Number"
+      - label: "Nomor WhatsApp"
         name: "whatsapp_number"
         widget: "string"
-        hint: "Include country code, e.g. +6281234567890"
+        hint: "Cantumkan kode negara, contoh +6281234567890"
   - name: "site_settings"
-    label: "Site Settings"
+    label: "Pengaturan Situs"
     files:
-      - label: "Homepage SEO"
+      - label: "SEO Beranda"
         name: "homepage_seo"
         file: "content/site/settings.md"
         fields:
-          - label: "Homepage OG Image"
+          - label: "Gambar OG Beranda"
             name: "og_image"
             widget: "image"
             required: false
-            hint: "Gambar default untuk preview saat homepage dibagikan di WhatsApp, Facebook, atau X. Rekomendasi rasio 1200x630."
+            hint: "Gambar default untuk pratinjau saat beranda dibagikan di WhatsApp, Facebook, atau X. Rekomendasi rasio 1200x630."
