@@ -6,12 +6,13 @@ type ProductShareProps = {
   title: string
   url: string
   description: string
+  siteName: string
 }
 
-export default function ProductShare({ title, url, description }: ProductShareProps) {
+export default function ProductShare({ title, url, description, siteName }: ProductShareProps) {
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle')
 
-  const shareText = `Lihat produk ${title} dari TeknoMesin: ${url}`
+  const shareText = `Lihat produk ${title} dari ${siteName}: ${url}`
   const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`
 
   const handleNativeShare = async () => {
@@ -44,14 +45,14 @@ export default function ProductShare({ title, url, description }: ProductSharePr
   }
 
   return (
-    <section className="rounded-2xl border border-industrial-200 bg-white p-5 shadow-sm" aria-labelledby="share-product-title">
+    <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm" aria-labelledby="share-product-title">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent-600">Bagikan produk</p>
-          <h2 id="share-product-title" className="mt-1 text-lg font-bold text-industrial-900">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--theme-primary)]">Bagikan produk</p>
+          <h2 id="share-product-title" className="mt-1 text-lg font-bold text-slate-950">
             Rekomendasikan produk ini
           </h2>
-          <p className="mt-1 text-sm text-industrial-500">
+          <p className="mt-1 text-sm text-slate-500">
             Kirim tautan produk ke rekan atau tim pembelian Anda.
           </p>
         </div>
@@ -61,7 +62,7 @@ export default function ProductShare({ title, url, description }: ProductSharePr
             href={whatsappShareUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-bold text-white shadow-sm shadow-green-900/20 transition-colors hover:bg-[#20bd5a] focus:outline-none focus:ring-4 focus:ring-[#25D366]/25"
+            className="inline-flex items-center gap-2 rounded-xl bg-[var(--theme-success)] px-4 py-2.5 text-sm font-bold text-white shadow-sm shadow-slate-900/10 transition-colors hover:brightness-95 focus:outline-none focus:ring-4 focus:ring-slate-500/25"
             aria-label={`Bagikan ${title} ke WhatsApp`}
           >
             <svg className="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -73,7 +74,7 @@ export default function ProductShare({ title, url, description }: ProductSharePr
           <button
             type="button"
             onClick={handleNativeShare}
-            className="inline-flex items-center gap-2 rounded-xl border border-industrial-200 bg-industrial-50 px-4 py-2.5 text-sm font-bold text-industrial-800 transition-colors hover:border-accent-300 hover:bg-accent-50 hover:text-accent-700 focus:outline-none focus:ring-4 focus:ring-accent-500/20"
+            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-bold text-slate-800 transition-colors hover:border-primary-300 hover:bg-primary-50 hover:text-[var(--theme-primary-dark)] focus:outline-none focus:ring-4 focus:ring-primary-500/20"
           >
             <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l10-7v14L7 12zM5 12h2" />
@@ -84,7 +85,7 @@ export default function ProductShare({ title, url, description }: ProductSharePr
           <button
             type="button"
             onClick={handleCopyLink}
-            className="inline-flex items-center gap-2 rounded-xl border border-industrial-200 bg-white px-4 py-2.5 text-sm font-bold text-industrial-700 transition-colors hover:border-industrial-300 hover:bg-industrial-50 focus:outline-none focus:ring-4 focus:ring-industrial-500/10"
+            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-500/10"
           >
             <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8a2 2 0 012 2v9a2 2 0 01-2 2H8a2 2 0 01-2-2V9a2 2 0 012-2z" />
@@ -95,7 +96,7 @@ export default function ProductShare({ title, url, description }: ProductSharePr
         </div>
       </div>
 
-      <p className="mt-3 min-h-5 text-sm font-medium text-industrial-500" aria-live="polite">
+      <p className="mt-3 min-h-5 text-sm font-medium text-slate-500" aria-live="polite">
         {copyStatus === 'copied' && 'Link produk berhasil disalin.'}
         {copyStatus === 'error' && 'Link belum bisa disalin otomatis. Silakan salin dari alamat browser.'}
       </p>

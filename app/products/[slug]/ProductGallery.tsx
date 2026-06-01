@@ -42,8 +42,8 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
 
   if (!activeImage) {
     return (
-      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-industrial-100 shadow-xl">
-        <div className="flex items-center justify-center h-full text-industrial-300">
+      <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-slate-100 shadow-antd border border-slate-200">
+        <div className="flex items-center justify-center h-full text-slate-300">
           <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.75} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.75} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -58,7 +58,7 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
       <button
         type="button"
         onClick={() => setIsLightboxOpen(true)}
-        className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-industrial-100 shadow-xl focus:outline-none focus:ring-4 focus:ring-accent-500/30"
+        className="group relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-slate-100 shadow-antd border border-slate-200 focus:outline-none focus:ring-4 focus:ring-slate-500/30"
         aria-label={`Perbesar gambar ${title}`}
       >
         <Image
@@ -69,7 +69,7 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           priority
         />
-        <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-industrial-950/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition-colors group-hover:bg-accent-600">
+        <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-slate-950/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition-colors group-hover:bg-[var(--theme-primary)]">
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35m1.1-5.4a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0zM10 8v6m-3-3h6" />
           </svg>
@@ -84,10 +84,10 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
               key={`${image}-${index}`}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className={`relative aspect-square overflow-hidden rounded-xl border-2 bg-industrial-100 transition-all focus:outline-none focus:ring-2 focus:ring-accent-500/40 ${
+              className={`relative aspect-square overflow-hidden rounded-xl border-2 bg-slate-100 transition-all focus:outline-none focus:ring-2 focus:ring-slate-500/40 ${
                 activeIndex === index
-                  ? 'border-accent-500 shadow-md shadow-accent-500/20'
-                  : 'border-transparent opacity-75 hover:border-accent-300 hover:opacity-100'
+                  ? 'border-[var(--theme-primary)] shadow-md shadow-slate-900/10'
+                  : 'border-transparent opacity-75 hover:border-slate-300 hover:opacity-100'
               }`}
               aria-label={`Tampilkan gambar ${index + 1} dari ${images.length}`}
             >
@@ -105,7 +105,7 @@ export default function ProductGallery({ images, title }: ProductGalleryProps) {
 
       {isLightboxOpen && (
         <div
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-industrial-950/95 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/95 p-4 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-label={`Lightbox gambar ${title}`}

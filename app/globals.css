@@ -8,10 +8,90 @@ html {
 
 body {
   min-height: 100vh;
+  background: var(--theme-background, #f5f7fa);
+  color: var(--theme-text, #0f172a);
+  font-family: var(--theme-font, Inter, system-ui, sans-serif);
+}
+
+::selection {
+  background: var(--theme-primary, #1677ff);
+  color: #ffffff;
 }
 
 summary::-webkit-details-marker {
   display: none;
+}
+
+@layer components {
+  .antd-card {
+    border-radius: var(--theme-card-radius, 1rem);
+    border: 1px solid rgb(226 232 240);
+    background: var(--theme-surface, #ffffff);
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+    transition-duration: 300ms;
+  }
+
+  .antd-card:hover {
+    border-color: color-mix(in srgb, var(--theme-primary, #1677ff) 28%, white);
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .antd-button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--theme-button-radius, 0.75rem);
+    background: var(--theme-primary, #1677ff);
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #ffffff;
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--theme-primary, #1677ff) 22%, transparent);
+    transition-duration: 200ms;
+  }
+
+  .antd-button-primary:hover {
+    transform: translateY(-2px);
+    background: var(--theme-primary-dark, #0958d9);
+  }
+
+  .antd-button-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--theme-button-radius, 0.75rem);
+    border: 1px solid rgb(226 232 240);
+    background: var(--theme-surface, #ffffff);
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--theme-text, #0f172a);
+    box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+    transition-duration: 200ms;
+  }
+
+  .antd-button-default:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--theme-primary, #1677ff) 32%, white);
+    color: var(--theme-primary, #1677ff);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  }
+
+  .theme-primary-text {
+    color: var(--theme-primary, #1677ff);
+  }
+
+  .theme-primary-bg {
+    background: var(--theme-primary, #1677ff);
+  }
+
+  .theme-success-bg {
+    background: var(--theme-success, #52c41a);
+  }
+
+  .theme-surface-bg {
+    background: var(--theme-surface, #ffffff);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
