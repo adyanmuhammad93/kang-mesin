@@ -11,6 +11,7 @@ import {
 } from '@/lib/products'
 import SiteHeader from '@/app/components/SiteHeader'
 import ProductGallery from './ProductGallery'
+import ProductShare from './ProductShare'
 
 export async function generateStaticParams() {
   return getProducts().map((product) => ({ slug: product.slug }))
@@ -163,6 +164,8 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 </div>
               </div>
             )}
+
+            <ProductShare title={data.title} url={productUrl} description={description} />
 
             {/* Ajakan WhatsApp (sebaris untuk layar besar) */}
             <div className="bg-gradient-to-r from-[#25D366]/10 to-[#128C7E]/10 border border-[#25D366]/30 rounded-2xl p-6">
