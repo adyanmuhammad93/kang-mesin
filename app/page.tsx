@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SiteHeader from './components/SiteHeader'
 import { getCategories, getProducts } from '@/lib/products'
 
 export default function HomePage() {
@@ -8,27 +9,10 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Navigasi */}
-      <header className="bg-industrial-950 text-white">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-accent-500 rounded flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <span className="text-xl font-bold tracking-tight">TeknoMesin</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-industrial-300">
-            <Link href="/#products" className="hover:text-white transition-colors">Produk</Link>
-            <Link href="/#about" className="hover:text-white transition-colors">Keunggulan</Link>
-            <Link href="/#contact" className="hover:text-white transition-colors">Kontak</Link>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader />
 
       {/* Bagian Hero */}
+      <main id="main-content">
       <section className="relative bg-industrial-950 text-white overflow-hidden">
         {/* Pola latar belakang */}
         <div className="absolute inset-0 opacity-5">
@@ -101,7 +85,7 @@ export default function HomePage() {
       </section>
 
       {/* Bagian Produk */}
-      <section id="products" className="py-20 bg-gray-50">
+      <section id="products" className="scroll-mt-24 py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-industrial-900 mb-3">Katalog Mesin Industri Makanan</h2>
@@ -185,7 +169,7 @@ export default function HomePage() {
       </section>
 
       {/* Keunggulan */}
-      <section id="about" className="py-20 bg-white border-t border-gray-100">
+      <section id="about" className="scroll-mt-24 py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -248,7 +232,7 @@ export default function HomePage() {
       </section>
 
       {/* Kontak / Ajakan Bertindak */}
-      <section id="contact" className="py-20 bg-industrial-950 text-white">
+      <section id="contact" className="scroll-mt-24 py-20 bg-industrial-950 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Siap Konsultasi Kebutuhan Mesin?</h2>
           <p className="text-industrial-300 text-lg mb-10 max-w-xl mx-auto">
@@ -267,6 +251,8 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
+      </main>
 
       {/* Kaki halaman */}
       <footer className="bg-industrial-950 border-t border-industrial-800 py-8">

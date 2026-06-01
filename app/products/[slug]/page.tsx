@@ -9,6 +9,7 @@ import {
   resolveImageUrls,
   stripMarkdown,
 } from '@/lib/products'
+import SiteHeader from '@/app/components/SiteHeader'
 import ProductGallery from './ProductGallery'
 
 export async function generateStaticParams() {
@@ -88,27 +89,20 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
-      {/* Navigasi */}
-      <header className="bg-industrial-950 text-white sticky top-0 z-40 shadow-md">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-industrial-300 hover:text-white transition-colors text-sm"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Kembali ke Katalog
-          </Link>
-          <span className="text-industrial-700">/</span>
-          <span className="text-industrial-400 text-sm truncate max-w-xs">{data.title}</span>
-        </nav>
-      </header>
+      <SiteHeader />
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <div className="border-b border-industrial-100 bg-white">
+        <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-sm text-industrial-500 sm:px-6">
+          <Link href="/" className="font-medium hover:text-accent-600">Katalog</Link>
+          <span aria-hidden="true">/</span>
+          <span className="truncate text-industrial-800">{data.title}</span>
+        </div>
+      </div>
+
+      <main id="main-content" className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Gambar Produk */}
-          <div className="sticky top-24">
+          <div className="lg:sticky lg:top-24">
             <ProductGallery images={data.images} title={data.title} />
 
             {/* Label kategori di bawah gambar */}
