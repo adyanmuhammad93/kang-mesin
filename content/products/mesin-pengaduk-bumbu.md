@@ -2,7 +2,8 @@
 title: Mesin Pengaduk Bumbu
 sku: PB-15-SS
 category: Mesin Pengolahan Makanan Ringan
-image: /uploads/screenshot_20240901-160839-1.jpg
+images:
+  - /uploads/screenshot_20240901-160839-1.jpg
 specs:
   - "Material Utama: Baja Nirkarat aman pangan"
   - "Sistem Putaran: Otomatis dengan motor penggerak"

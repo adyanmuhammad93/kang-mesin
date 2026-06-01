@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
@@ -7,9 +6,10 @@ import {
   getProduct,
   getProducts,
   getSiteUrl,
-  resolveImageUrl,
+  resolveImageUrls,
   stripMarkdown,
 } from '@/lib/products'
+import ProductGallery from './ProductGallery'
 
 export async function generateStaticParams() {
   return getProducts().map((product) => ({ slug: product.slug }))
@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!product) return { title: 'Produk Tidak Ditemukan' }
 
   const description = createMetaDescription(product)
-  const image = resolveImageUrl(product.data.image)
+  const images = resolveImageUrls(product.data.images)
 
   return {
     title: product.data.title,
@@ -39,13 +39,13 @@ export async function generateMetadata({
       siteName: 'TeknoMesin',
       title: `${product.data.title} | TeknoMesin`,
       description,
-      images: image ? [{ url: image, alt: product.data.title }] : undefined,
+      images: images.length > 0 ? images.map((image) => ({ url: image, alt: product.data.title })) : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title: `${product.data.title} | TeknoMesin`,
       description,
-      images: image ? [image] : undefined,
+      images: images.length > 0 ? images : undefined,
     },
   }
 }
@@ -61,7 +61,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
   const description = createMetaDescription(product)
   const productUrl = `${getSiteUrl()}/products/${params.slug}`
-  const imageUrl = resolveImageUrl(data.image)
+  const imageUrls = resolveImageUrls(data.images)
   const productJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -69,7 +69,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     description,
     sku: data.sku,
     category: data.category,
-    image: imageUrl ? [imageUrl] : undefined,
+    image: imageUrls.length > 0 ? imageUrls : undefined,
     brand: {
       '@type': 'Brand',
       name: 'TeknoMesin',
@@ -109,25 +109,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Gambar Produk */}
           <div className="sticky top-24">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-industrial-100 shadow-xl">
-              {data.image ? (
-                <Image
-                  src={data.image}
-                  alt={data.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
-                />
-              ) : (
-                <div className="flex items-center justify-center h-full text-industrial-300">
-                  <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.75} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.75} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-              )}
-            </div>
+            <ProductGallery images={data.images} title={data.title} />
 
             {/* Label kategori di bawah gambar */}
             <div className="mt-4 flex items-center gap-3">

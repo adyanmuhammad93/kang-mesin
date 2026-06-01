@@ -18,7 +18,7 @@ Next.js 14 App Router site using Static Site Generation (SSG). No database — c
 │       └── page.tsx          # Dynamic product detail page
 ├── content/
 │   └── products/             # Markdown product files (CMS-managed)
-│       └── *.md              # Frontmatter: title, sku, category, image, specs[], whatsapp_number
+│       └── *.md              # Frontmatter: title, sku, category, images[], specs[], whatsapp_number
 ├── public/
 │   ├── admin/
 │   │   ├── index.html        # Decap CMS entry point
@@ -44,7 +44,7 @@ Next.js 14 App Router site using Static Site Generation (SSG). No database — c
 title: string
 sku: string
 category: string (select)
-image: image URL or path
+images: list of image URLs or paths
 specs: list of strings (format: "Key: Value" for table rendering)
 whatsapp_number: string (with country code)
 body: markdown content (description)

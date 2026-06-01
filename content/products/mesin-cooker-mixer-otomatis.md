@@ -2,7 +2,8 @@
 title: Mesin Pemasak dan Pengaduk Otomatis
 sku: MCMO-80-SS
 category: Mesin Industri Makanan
-image: /uploads/1716812286805.jpg
+images:
+  - /uploads/1716812286805.jpg
 specs:
   - "Material Utama: Baja Nirkarat aman pangan"
   - "Sistem Pengaduk: Otomatis dengan motor penggerak"
