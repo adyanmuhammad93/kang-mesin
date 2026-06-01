@@ -1,35 +1,38 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import Script from 'next/script'
-import { getSiteSettings, getSiteUrl, resolveImageUrl } from '@/lib/products'
+import type { Metadata } from "next";
+import "./globals.css";
+import Script from "next/script";
+import { getSiteSettings, getSiteUrl, resolveImageUrl } from "@/lib/products";
 
-const siteUrl = getSiteUrl()
-const siteDescription =
-  'TeknoMesin menyediakan mesin industri makanan baja nirkarat untuk UMKM dan industri, termasuk mesin pemasak-pengaduk, mesin peniris minyak, mesin pengaduk adonan, pengaduk bumbu, dan wajan kustom.'
-const siteOgImage = resolveImageUrl(getSiteSettings().og_image)
+const siteUrl = getSiteUrl();
+const siteSettings = getSiteSettings();
+const siteTitle = siteSettings.site_title;
+const siteDescription = siteSettings.meta_description;
+const siteOgImage = resolveImageUrl(siteSettings.og_image);
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'TeknoMesin | Mesin Industri Makanan Kustom',
-    template: '%s | TeknoMesin',
+    default: siteTitle,
+    template: "%s | TeknoMesin",
   },
   description: siteDescription,
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    type: 'website',
-    locale: 'id_ID',
-    url: '/',
-    siteName: 'TeknoMesin',
-    title: 'TeknoMesin | Mesin Industri Makanan Kustom',
+    type: "website",
+    locale: "id_ID",
+    url: "/",
+    siteName: "TeknoMesin",
+    title: siteTitle,
     description: siteDescription,
-    images: siteOgImage ? [{ url: siteOgImage, alt: 'Katalog mesin industri makanan TeknoMesin' }] : undefined,
+    images: siteOgImage
+      ? [{ url: siteOgImage, alt: "Katalog mesin industri makanan TeknoMesin" }]
+      : undefined,
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'TeknoMesin | Mesin Industri Makanan Kustom',
+    card: "summary_large_image",
+    title: siteTitle,
     description: siteDescription,
     images: siteOgImage ? [siteOgImage] : undefined,
   },
@@ -39,23 +42,27 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="id">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
@@ -81,5 +88,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
