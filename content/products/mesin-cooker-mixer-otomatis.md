@@ -1,9 +1,15 @@
 ---
 title: Mesin Cooker Mixer Otomatis
 sku: MCMO-80-SS
-category: Power Transmission
+category: Mesin Industri Makanan
 image: /uploads/1716812286805.jpg
-specs: []
+specs:
+  - "Material Utama: Stainless Steel food grade"
+  - "Sistem Pengaduk: Otomatis dengan motor penggerak"
+  - "Sistem Pemanas: Gas atau kayu bakar"
+  - "Rangka: Kuat dan tahan lama"
+  - "Kapasitas: Custom sesuai kebutuhan"
+meta_description: "Mesin cooker mixer otomatis stainless untuk memasak dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara merata."
 whatsapp_number: "+6281222397424"
 ---
 

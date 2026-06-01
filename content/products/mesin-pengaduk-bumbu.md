@@ -1,9 +1,15 @@
 ---
 title: Mesin Pengaduk Bumbu
 sku: PB-15-SS
-category: Power Transmission
+category: Mesin Pengolahan Snack
 image: /uploads/screenshot_20240901-160839-1.jpg
-specs: []
+specs:
+  - "Material Utama: Stainless Steel food grade"
+  - "Sistem Putaran: Otomatis dengan motor penggerak"
+  - "Fungsi: Mencampur bumbu kering atau cair"
+  - "Aplikasi: Keripik, makaroni, kerupuk, kacang, dan snack"
+  - "Kapasitas: Custom sesuai kebutuhan"
+meta_description: "Mesin pengaduk bumbu otomatis stainless untuk mencampur bumbu pada keripik, makaroni, kerupuk, kacang, dan snack secara merata."
 whatsapp_number: "+6281222397424"
 ---
 

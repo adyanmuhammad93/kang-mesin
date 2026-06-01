@@ -1,33 +1,18 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-
-interface ProductData {
-  title: string
-  sku: string
-  category: string
-  image: string
-  specs: string[]
-  whatsapp_number: string
-}
-
-function getProduct(slug: string): { data: ProductData; content: string } | null {
-  const filePath = path.join(process.cwd(), 'content/products', `${slug}.md`)
-  if (!fs.existsSync(filePath)) return null
-  const raw = fs.readFileSync(filePath, 'utf-8')
-  const { data, content } = matter(raw)
-  return { data: data as ProductData, content }
-}
+import {
+  createMetaDescription,
+  getProduct,
+  getProducts,
+  getSiteUrl,
+  resolveImageUrl,
+  stripMarkdown,
+} from '@/lib/products'
 
 export async function generateStaticParams() {
-  const productsDir = path.join(process.cwd(), 'content/products')
-  if (!fs.existsSync(productsDir)) return []
-  const files = fs.readdirSync(productsDir).filter((f) => f.endsWith('.md'))
-  return files.map((f) => ({ slug: f.replace(/\.md$/, '') }))
+  return getProducts().map((product) => ({ slug: product.slug }))
 }
 
 export async function generateMetadata({
@@ -36,10 +21,32 @@ export async function generateMetadata({
   params: { slug: string }
 }): Promise<Metadata> {
   const product = getProduct(params.slug)
-  if (!product) return { title: 'Product Not Found' }
+  if (!product) return { title: 'Produk Tidak Ditemukan' }
+
+  const description = createMetaDescription(product)
+  const image = resolveImageUrl(product.data.image)
+
   return {
-    title: `${product.data.title} | TeknoMesin`,
-    description: product.content.slice(0, 160),
+    title: product.data.title,
+    description,
+    alternates: {
+      canonical: `/products/${params.slug}`,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'id_ID',
+      url: `/products/${params.slug}`,
+      siteName: 'TeknoMesin',
+      title: `${product.data.title} | TeknoMesin`,
+      description,
+      images: image ? [{ url: image, alt: product.data.title }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${product.data.title} | TeknoMesin`,
+      description,
+      images: image ? [image] : undefined,
+    },
   }
 }
 
@@ -52,14 +59,35 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     `Halo, saya tertarik dengan produk ${data.title}`
   )}`
 
-  // Simple markdown-to-paragraphs conversion for the description
+  const description = createMetaDescription(product)
+  const productUrl = `${getSiteUrl()}/products/${params.slug}`
+  const imageUrl = resolveImageUrl(data.image)
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: data.title,
+    description,
+    sku: data.sku,
+    category: data.category,
+    image: imageUrl ? [imageUrl] : undefined,
+    brand: {
+      '@type': 'Brand',
+      name: 'TeknoMesin',
+    },
+    url: productUrl,
+  }
+
   const paragraphs = content
     .split('\n\n')
-    .map((p) => p.trim())
+    .map((paragraph) => stripMarkdown(paragraph.trim()))
     .filter(Boolean)
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* Navigation */}
       <header className="bg-industrial-950 text-white sticky top-0 z-40 shadow-md">
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4">
@@ -70,7 +98,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Catalog
+            Kembali ke Katalog
           </Link>
           <span className="text-industrial-700">/</span>
           <span className="text-industrial-400 text-sm truncate max-w-xs">{data.title}</span>
@@ -125,14 +153,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               </div>
             </div>
 
-            {/* Technical Specifications */}
+            {/* Spesifikasi Teknis */}
             {data.specs && data.specs.length > 0 && (
               <div>
                 <h2 className="text-xl font-bold text-industrial-900 mb-4 flex items-center gap-2">
                   <svg className="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
-                  Technical Specifications
+                  Spesifikasi Teknis
                 </h2>
                 <div className="bg-industrial-50 rounded-xl border border-industrial-200 overflow-hidden">
                   {data.specs.map((spec, index) => {
@@ -162,9 +190,9 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
             {/* WhatsApp CTA (inline for desktop) */}
             <div className="bg-gradient-to-r from-[#25D366]/10 to-[#128C7E]/10 border border-[#25D366]/30 rounded-2xl p-6">
-              <p className="text-industrial-700 font-medium mb-1">Interested in this product?</p>
+              <p className="text-industrial-700 font-medium mb-1">Tertarik dengan produk ini?</p>
               <p className="text-industrial-500 text-sm mb-4">
-                Contact our sales team directly via WhatsApp for pricing, availability, and custom configurations.
+                Hubungi tim kami via WhatsApp untuk konsultasi harga, ketersediaan, dan kebutuhan custom.
               </p>
               <a
                 href={whatsappUrl}
@@ -202,7 +230,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       <footer className="mt-20 bg-industrial-950 border-t border-industrial-800 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-industrial-500 text-sm">
           <div>© {new Date().getFullYear()} TeknoMesin. All rights reserved.</div>
-          <Link href="/" className="hover:text-white transition-colors">← Back to Catalog</Link>
+          <Link href="/" className="hover:text-white transition-colors">← Kembali ke Katalog</Link>
         </div>
       </footer>
     </>

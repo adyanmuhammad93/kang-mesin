@@ -27,20 +27,23 @@ collections:
         name: "category"
         widget: "select"
         options:
-          - "Conveyor Systems"
-          - "Hydraulic Equipment"
-          - "Pneumatic Tools"
-          - "CNC Machinery"
-          - "Welding Equipment"
-          - "Material Handling"
-          - "Pumps & Compressors"
-          - "Power Transmission"
-          - "Safety Equipment"
+          - "Mesin Industri Makanan"
+          - "Mesin Pengolahan Snack"
+          - "Mesin Mixer / Pengaduk"
+          - "Peralatan Produksi Makanan"
+          - "Mesin UMKM"
+          - "Mesin Stainless Food Grade"
+          - "Mesin Custom"
           - "Other"
       - label: "Product Image"
         name: "image"
         widget: "image"
         required: false
+      - label: "Meta Description"
+        name: "meta_description"
+        widget: "text"
+        required: false
+        hint: "Ringkasan SEO 120–160 karakter untuk hasil pencarian dan social preview."
       - { label: "Description", name: "body", widget: "markdown" }
       - label: "Technical Specifications"
         name: "specs"
@@ -54,3 +57,15 @@ collections:
         name: "whatsapp_number"
         widget: "string"
         hint: "Include country code, e.g. +6281234567890"
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - label: "Homepage SEO"
+        name: "homepage_seo"
+        file: "content/site/settings.md"
+        fields:
+          - label: "Homepage OG Image"
+            name: "og_image"
+            widget: "image"
+            required: false
+            hint: "Gambar default untuk preview saat homepage dibagikan di WhatsApp, Facebook, atau X. Rekomendasi rasio 1200x630."
