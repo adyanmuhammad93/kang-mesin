@@ -14,6 +14,7 @@ specs:
   - "Material Rangka: Besi kokoh"
   - "Sistem Kerja: Putaran sentrifugal"
   - "Ukuran: Kustom sesuai kebutuhan"
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 

@@ -11,6 +11,7 @@ specs:
   - "Rangka: Kuat dan tahan lama"
   - "Kapasitas: Kustom sesuai kebutuhan"
 meta_description: "Mesin pemasak-pengaduk otomatis baja nirkarat untuk memasak dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara merata."
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 

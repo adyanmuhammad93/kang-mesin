@@ -4,6 +4,7 @@ sku: TH-8090-SS
 category: Other
 images:
   - /uploads/1696505640169.jpg
+price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 

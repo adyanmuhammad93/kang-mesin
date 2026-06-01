@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
   createMetaDescription,
+  formatProductPrice,
   getProduct,
   getProducts,
   getSiteSettings,
