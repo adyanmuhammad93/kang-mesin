@@ -1,21 +1,45 @@
 ---
-title: "CNC Vertical Machining Center VMC-1050"
-sku: "CNC-VMC-1050"
-category: "CNC Machinery"
-image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80"
-whatsapp_number: "+6281234567890"
-specs:
-  - "X/Y/Z Travel: 1,050 × 520 × 500 mm"
-  - "Spindle Speed: 8,000 – 15,000 RPM"
-  - "Spindle Taper: BT40 / ISO40"
-  - "Rapid Traverse: 36 m/min"
-  - "Tool Capacity: 24 ATC positions"
-  - "Table Size: 1,100 × 520 mm"
-  - "Max Table Load: 800 kg"
-  - "Controller: Fanuc 0i-MF / Siemens 828D"
-  - "Positioning Accuracy: ±0.005 mm"
+title: Dough Mixer (Mesin Mixer Adonan)
+sku: DM-50-SS
+category: Power Transmission
+image: /uploads/screenshot_20240925-112223.jpg
+specs: []
+whatsapp_number: "+6281222397424"
 ---
 
-The VMC-1050 is a rigid, high-speed vertical machining center built for precision part manufacturing. Suitable for mold making, aerospace components, and complex mechanical parts, it delivers exceptional surface finish and dimensional accuracy.
 
-A high-rigidity Meehanite cast iron structure dampens vibration, while the high-speed spindle with direct-drive motor ensures thermal stability during extended cutting operations. The 24-tool automatic tool changer enables uninterrupted, complex multi-operation machining cycles.
+**MESIN DOUGH MIXER / MESIN PENGADUK ADONAN PANGSIT, MIE & DIMSUM**
+
+Mesin Dough Mixer merupakan mesin pengaduk adonan yang dirancang untuk mencampur bahan secara merata dan cepat, sehingga menghasilkan adonan yang homogen, elastis, dan siap untuk proses produksi selanjutnya. Mesin ini sangat cocok digunakan untuk pembuatan adonan pangsit, mie, dimsum, kulit siomay, kulit pastel, dan berbagai jenis produk berbahan dasar tepung lainnya.
+
+**Keunggulan Produk:**
+
+* Proses pengadukan lebih cepat dan merata.
+* Menghasilkan adonan yang homogen dan berkualitas.
+* Menghemat waktu serta tenaga kerja.
+* Cocok untuk usaha rumahan, UMKM, hingga industri makanan.
+* Mudah dioperasikan dan dibersihkan.
+* Konstruksi kokoh dan tahan lama.
+
+**Spesifikasi Umum:**
+
+* Material utama: Stainless Steel
+* Rangka Besi kuat dan kokoh
+* Sistem pengaduk efisien untuk berbagai jenis adonan
+* Penggerak motor listrik/ Dinamo
+* Kapasitas dapat disesuaikan sesuai kebutuhan
+
+**Custom Sesuai Kebutuhan**
+Kami melayani pembuatan mesin dengan ukuran, kapasitas, dan spesifikasi yang dapat disesuaikan dengan kebutuhan produksi Anda. Material utama menggunakan stainless steel yang higienis, tahan karat, dan aman untuk industri makanan.
+
+**Aplikasi Produk:**
+
+* Adonan kulit pangsit
+* Adonan mie
+* Adonan dimsum
+* Adonan kulit siomay
+* Adonan kulit pastel
+* Adonan Roti
+* Aneka adonan berbahan tepung lainnya
+
+Dengan menggunakan Mesin Dough Mixer, proses produksi menjadi lebih efisien, hasil adonan lebih konsisten, dan kapasitas produksi dapat ditingkatkan untuk memenuhi kebutuhan usaha yang terus berkembang.
