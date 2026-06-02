@@ -2,16 +2,19 @@
 title: Mesin Pengaduk Bumbu
 sku: PB-15-SS
 category: Mesin Pengolahan Makanan Ringan
+price: Hubungi untuk harga
 images:
   - /uploads/screenshot_20240901-160839-1.jpg
+  - /uploads/screenshot_20240901-160853-1.jpg
+meta_description: Mesin pengaduk bumbu otomatis baja nirkarat untuk mencampur
+  bumbu pada keripik, makaroni, kerupuk, kacang, dan makanan ringan secara
+  merata.
 specs:
   - "Material Utama: Baja Nirkarat aman pangan"
   - "Sistem Putaran: Otomatis dengan motor penggerak"
   - "Fungsi: Mencampur bumbu kering atau cair"
   - "Aplikasi: Keripik, makaroni, kerupuk, kacang, dan makanan ringan"
   - "Kapasitas: Kustom sesuai kebutuhan"
-meta_description: "Mesin pengaduk bumbu otomatis baja nirkarat untuk mencampur bumbu pada keripik, makaroni, kerupuk, kacang, dan makanan ringan secara merata."
-price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 
