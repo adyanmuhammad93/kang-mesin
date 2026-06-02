@@ -10,6 +10,7 @@ images:
   - /uploads/488223597_648062444710878_6299620348677617484_n.jpg
   - /uploads/711602006_2031223291132595_8093041040251554320_n.jpg
   - /uploads/710756072_2031223221132602_4113879983940753593ww_n.jpg
+  - /uploads/710756072_2031223221132602_4113879983940753593ww_n.jpg
 meta_description: Mesin peniris minyak baja nirkarat untuk mengurangi minyak
   pada keripik, makanan ringan, bawang goreng, dan makanan goreng agar lebih
   renyah dan tahan lama.
