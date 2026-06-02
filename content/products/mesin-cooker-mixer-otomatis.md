@@ -2,16 +2,19 @@
 title: Mesin Pemasak dan Pengaduk Otomatis
 sku: MCMO-80-SS
 category: Mesin Industri Makanan
+price: Hubungi untuk harga
 images:
   - /uploads/1716812286805.jpg
+  - /uploads/screenshot_20230928-124512.jpg
+meta_description: Mesin pemasak-pengaduk otomatis baja nirkarat untuk memasak
+  dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara
+  merata.
 specs:
   - "Material Utama: Baja Nirkarat aman pangan"
   - "Sistem Pengaduk: Otomatis dengan motor penggerak"
   - "Sistem Pemanas: Gas atau kayu bakar"
   - "Rangka: Kuat dan tahan lama"
   - "Kapasitas: Kustom sesuai kebutuhan"
-meta_description: "Mesin pemasak-pengaduk otomatis baja nirkarat untuk memasak dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara merata."
-price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 
