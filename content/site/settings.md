@@ -1,13 +1,14 @@
 ---
 seo_section:
   og_image: /uploads/1716812295249.jpg
-  site_title: TeknoMesin | Mesin Industri Makanan Kustom
-  meta_description: TeknoMesin menyediakan mesin industri makanan baja nirkarat
-    untuk UMKM dan industri, termasuk mesin pemasak-pengaduk, mesin peniris
-    minyak, mesin pengaduk adonan, pengaduk bumbu, dan wajan kustom.
+  site_title: TeknoMesin | Mesin dan peralatan Industri Makanan Kustom
+  meta_description: TeknoMesin menyediakan mesin & Peralatan dapur industri
+    makanan baja nirkarat untuk UMKM dan industri, termasuk mesin
+    pemasak-pengaduk, mesin peniris minyak, mesin pengaduk adonan, pengaduk
+    bumbu, dan wajan kustom.
 brand_section:
   site_name: Tukang Mesin
-  site_tagline: Mesin industri makanan
+  site_tagline: Mesin & Peralatan dapur industri makanan
   logo_image: ""
   favicon: /favicon.svg
 design_section:
@@ -26,7 +27,7 @@ whatsapp_section:
   whatsapp_message: Halo, saya ingin konsultasi mesin industri makanan untuk
     kebutuhan produksi saya
 hero_section:
-  hero_eyebrow: Spesialis Mesin Industri Makanan & UMKM
+  hero_eyebrow: Spesialis Peralatan Industri Makanan & UMKM
   hero_secondary_label: Tanya Harga & Kapasitas
   hero_primary_url: /#products
   hero_badge_text: dari UMKM hingga industri
