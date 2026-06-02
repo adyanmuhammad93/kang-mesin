@@ -8,6 +8,8 @@ images:
   - /uploads/screenshot_20240901-160903-1.jpg
   - /uploads/1701421586771.jpg
   - /uploads/fb_img_1750125541730.jpg
+  - /uploads/486932980_643701015147021_8257372529076623841_n.jpg
+  - /uploads/1697716749984.jpg
 meta_description: Wajan besar Stanles untuk penggorengan industri, produksi
   keripik, makanan ringan, katering, UMKM, dan pengolahan makanan skala besar.
 specs:
