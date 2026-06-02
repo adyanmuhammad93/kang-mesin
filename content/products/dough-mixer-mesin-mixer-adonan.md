@@ -2,16 +2,21 @@
 title: Mesin Pengaduk Adonan
 sku: DM-50-SS
 category: Mesin Pengaduk
+price: Hubungi untuk harga
 images:
   - /uploads/screenshot_20240925-112223.jpg
+  - /uploads/screenshot_20231104-100542.jpg
+  - /uploads/470600686_569450455905411_8414506421886447942_n.jpg
+  - /uploads/470600686_569450455905411_8414506421886447942_n.jpg
+meta_description: Mesin pengaduk adonan baja nirkarat untuk mengaduk adonan
+  pangsit, mie, dimsum, kulit siomay, pastel, roti, dan aneka produk berbahan
+  tepung.
 specs:
   - "Material Utama: Baja Nirkarat"
   - "Rangka: Besi kuat dan kokoh"
   - "Sistem Pengaduk: Efisien untuk berbagai adonan"
   - "Penggerak: Motor listrik / dinamo"
   - "Kapasitas: Kustom sesuai kebutuhan"
-meta_description: "Mesin pengaduk adonan baja nirkarat untuk mengaduk adonan pangsit, mie, dimsum, kulit siomay, pastel, roti, dan aneka produk berbahan tepung."
-price: Hubungi untuk harga
 whatsapp_number: "+6281222397424"
 ---
 
