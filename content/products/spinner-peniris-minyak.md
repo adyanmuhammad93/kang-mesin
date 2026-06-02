@@ -4,8 +4,8 @@ sku: SPN-50X60-SS
 category: Mesin Pengolahan Makanan Ringan
 price: Hubungi untuk harga
 images:
-  - /uploads/1716478222121.jpg
   - /uploads/487475939_644528735064249_4182952560093707673_n.jpg
+  - /uploads/1716478222121.jpg
   - /uploads/488260158_647321574784965_9146960677843847064_n.jpg
   - /uploads/488223597_648062444710878_6299620348677617484_n.jpg
 meta_description: Mesin peniris minyak baja nirkarat untuk mengurangi minyak
