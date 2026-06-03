@@ -6,6 +6,7 @@ price: Hubungi untuk harga
 images:
   - /uploads/screenshot_20240901-160839-1.jpg
   - /uploads/screenshot_20240901-160853-1.jpg
+  - /uploads/1780395647661.jpg
 meta_description: Mesin pengaduk bumbu otomatis baja nirkarat untuk mencampur
   bumbu pada keripik, makaroni, kerupuk, kacang, dan makanan ringan secara
   merata.
