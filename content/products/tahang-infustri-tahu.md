@@ -1,15 +1,16 @@
 ---
-title: "Tahang Infustri Tahu "
+title: "Tahang Industri Tahu "
 sku: TH-8090-SS
-category: Other
+category: Mesin Baja Nirkarat Aman Pangan
+price: Hubungi untuk harga
 images:
   - /uploads/1696505640169.jpg
-price: Hubungi untuk harga
+  - /uploads/1780395688966.jpg
+  - /uploads/1780395695212.jpg
+  - /uploads/1780395613703.jpg
 whatsapp_number: "+6281222397424"
 ---
-
-
-**TAHANG INDUSTRI TAHU – CUSTOM STAINLESS STEEL**
+**TAHANG INDUSTRI TAHU / PEREBUSAN**
 
 Tahang industri tahu digunakan untuk proses produksi tahu, mulai dari penampungan, pengolahan, hingga pencetakan sesuai kebutuhan usaha. Terbuat dari bahan stainless steel yang higienis, kuat, tahan karat, dan aman untuk kontak langsung dengan bahan pangan.
 
