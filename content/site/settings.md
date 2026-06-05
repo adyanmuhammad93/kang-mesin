@@ -107,13 +107,13 @@ about_section:
       label: Respons konsultasi via WhatsApp
 contact_section:
   maps_eyebrow: Lokasi kami
-  maps_embed_url: https://www.google.com/maps?q=TeknoMesin&output=embed
+  maps_embed_url: https://maps.app.goo.gl/Mr19rG9tXT6mahsJA
   contact_cta_label: Hubungi via WhatsApp
   contact_eyebrow: Konsultasi gratis
   footer_tagline: Mesin Industri Makanan • Baja Nirkarat • Kustom
   maps_title: Temukan TeknoMesin di Google Maps
   footer_text: TeknoMesin. Hak cipta dilindungi.
-  maps_link_url: https://www.google.com/maps/search/?api=1&query=TeknoMesin
+  maps_link_url: https://maps.app.goo.gl/Mr19rG9tXT6mahsJA
   maps_description: Lihat lokasi kami di Google Maps atau hubungi WhatsApp untuk
     arahan kunjungan dan konsultasi kebutuhan mesin.
   contact_title: Siap Konsultasi Kebutuhan Mesin?
