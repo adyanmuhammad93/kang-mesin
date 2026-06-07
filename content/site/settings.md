@@ -1,11 +1,11 @@
 ---
 seo_section:
   og_image: /uploads/1716812295249.jpg
-  site_title: TeknoMesin | Mesin dan peralatan Industri Makanan Kustom
-  meta_description: TeknoMesin menyediakan mesin & Peralatan dapur industri
-    makanan baja nirkarat untuk UMKM dan industri, termasuk mesin
-    pemasak-pengaduk, mesin peniris minyak, mesin pengaduk adonan, pengaduk
-    bumbu, dan wajan kustom.
+  site_title: Tukang Mesin | Mesin dan peralatan Industri Makanan Kustom
+  meta_description: Tukang Mesin menyediakan mesin & Peralatan dapur industri
+    makanan Stanless untuk UMKM dan industri, termasuk mesin pemasak-pengaduk,
+    mesin peniris minyak, mesin pengaduk adonan, pengaduk bumbu, dan wajan
+    kustom.
 brand_section:
   site_name: Tukang Mesin
   site_tagline: Mesin & Peralatan dapur industri makanan
@@ -37,11 +37,11 @@ hero_section:
     - Konsultasi ukuran & kapasitas
     - Material baja nirkarat aman pangan
     - Pilihan mesin siap pakai dan kustom
-  hero_primary_label: Lihat Katalog Mesin
+  hero_primary_label: Lihat Katalog Mesin dan peralatan idustri - UMKM
   hero_title: Naikkan Kapasitas Produksi dengan
   hero_badge_title: Kustom kapasitas produksi
-  hero_description: TeknoMesin membantu pelaku UMKM hingga industri memilih mesin
-    pengolahan makanan baja nirkarat yang higienis, kuat, dan bisa disesuaikan
+  hero_description: Tukang Mesin membantu pelaku UMKM hingga industri memilih
+    mesin pengolahan makanan Stanless yang higienis, kuat, dan bisa disesuaikan
     dengan alur produksi.
   hero_card_eyebrow: Produk favorit pelanggan
 landing_stats:
@@ -57,7 +57,7 @@ products_section:
   products_eyebrow: Katalog pilihan
   products_title: Mesin Industri Makanan untuk Produksi Harian
   products_description: "Pilih mesin sesuai proses kerja Anda: pengaduk adonan,
-    pengaduk bumbu, pemasak-pengaduk, peniris minyak, hingga wajan baja nirkarat
+    pengaduk bumbu, pemasak-pengaduk, peniris minyak, hingga wajan Stanles
     kustom."
   products_cta_label: Butuh rekomendasi? Chat WhatsApp
 order_section:
@@ -78,7 +78,7 @@ order_section:
         konsisten.
 about_section:
   about_eyebrow: Alasan pembeli percaya
-  about_title: Kenapa Memilih TeknoMesin?
+  about_title: Kenapa Memilih Tukang Mesin?
   about_benefits:
     - icon: ⚙️
       title: Material Aman Pangan
