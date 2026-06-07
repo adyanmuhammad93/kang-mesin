@@ -4,6 +4,7 @@ sku: TH-8090-SS
 category: Mesin Baja Nirkarat Aman Pangan
 price: Hubungi untuk harga
 images:
+  - /uploads/chatgpt-image-jun-7-2026-10_57_17-am.png
   - /uploads/1696505640169.jpg
   - /uploads/1780395688966.jpg
   - /uploads/1780395695212.jpg
