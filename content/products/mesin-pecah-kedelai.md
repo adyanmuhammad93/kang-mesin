@@ -4,6 +4,7 @@ sku: MPk -Sr
 category: Lainnya
 price: Hubungi untuk harga
 images:
+  - /uploads/chatgpt-image-jun-7-2026-11_00_12-am.png
   - /uploads/whatsapp-image-2026-06-03-at-19.28.24.jpeg
   - /uploads/whatsapp-image-2026-06-03-at-19.28.23.jpeg
 meta_description: Mesin Pecah Kedelai dirancang untuk memecah biji kedelai
