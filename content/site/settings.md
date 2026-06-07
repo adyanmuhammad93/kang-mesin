@@ -107,13 +107,13 @@ about_section:
       label: Respons konsultasi via WhatsApp
 contact_section:
   maps_eyebrow: Lokasi kami
-  maps_embed_url: https://maps.app.goo.gl/Mr19rG9tXT6mahsJA
+  maps_embed_url: https://www.google.com/maps/place/Wajan+indonesia/@-6.9264874,107.5751521,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e76c3aec8add:0x405c64b6f6bab600!8m2!3d-6.9264874!4d107.5751521!16s%2Fg%2F11rgh46tdv?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D
   contact_cta_label: Hubungi via WhatsApp
   contact_eyebrow: Konsultasi gratis
   footer_tagline: Mesin Industri Makanan • Baja Nirkarat • Kustom
-  maps_title: Temukan TeknoMesin di Google Maps
-  footer_text: TeknoMesin. Hak cipta dilindungi.
-  maps_link_url: https://maps.app.goo.gl/Mr19rG9tXT6mahsJA
+  maps_title: Temukan Tukang Mesin di Google Maps
+  footer_text: Tukang Mesin. Hak cipta dilindungi.
+  maps_link_url: https://www.google.com/maps/place/Wajan+indonesia/@-6.9264874,107.5751521,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e76c3aec8add:0x405c64b6f6bab600!8m2!3d-6.9264874!4d107.5751521!16s%2Fg%2F11rgh46tdv?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D
   maps_description: Lihat lokasi kami di Google Maps atau hubungi WhatsApp untuk
     arahan kunjungan dan konsultasi kebutuhan mesin.
   contact_title: Siap Konsultasi Kebutuhan Mesin?
