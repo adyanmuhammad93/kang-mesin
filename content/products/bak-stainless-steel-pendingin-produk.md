@@ -1,11 +1,11 @@
 ---
-title: Bak Stainless Steel Pendingin Produk
+title: Bak Stainless Steel Peniris/Pemorsian Snack
 sku: BK-ss
 category: Lainnya
 price: Hubungi untuk Harga
 images:
   - /uploads/486850367_644121035105019_2141610845535509894_n.jpg
-  - /uploads/485965374_639176678932788_4308792243658907195_n.jpg
+  - /uploads/chatgpt-image-jun-7-2026-11_17_33-am.png
   - /uploads/481188880_623392203844569_4962292638671843646_n.jpg
   - /uploads/482072911_624737507043372_1413059170861418736_n.jpg
 meta_description: Bak Stainless Steel Pendingin Produk dirancang khusus untuk
