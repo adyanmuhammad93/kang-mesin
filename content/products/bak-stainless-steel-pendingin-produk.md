@@ -8,6 +8,7 @@ images:
   - /uploads/chatgpt-image-jun-7-2026-11_17_33-am.png
   - /uploads/481188880_623392203844569_4962292638671843646_n.jpg
   - /uploads/482072911_624737507043372_1413059170861418736_n.jpg
+  - /uploads/481481823_661549733199450_5234467261048541267_n.jpg
 meta_description: Bak Stainless Steel Pendingin Produk dirancang khusus untuk
   membantu proses pendinginan makanan setelah proses produksi sebelum dilakukan
   pemorsian, penimbangan, atau pengemasan
