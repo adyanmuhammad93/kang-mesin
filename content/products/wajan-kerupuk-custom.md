@@ -6,6 +6,7 @@ price: Hubungi Untuk harga
 images:
   - /uploads/chatgpt-image-jun-7-2026-01_57_07-pm.png
   - /uploads/chatgpt-image-jun-7-2026-01_58_42-pm.png
+  - /uploads/515436354_749003611120728_4248082862081373838_n.jpg
 meta_description: Wajan Besar Stainless Steel Custom untuk Industri Makanan
 whatsapp_number: "+6281222397424"
 ---
