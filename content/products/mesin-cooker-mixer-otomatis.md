@@ -7,6 +7,8 @@ images:
   - /uploads/1716812286805.jpg
   - /uploads/screenshot_20230928-124512.jpg
   - /uploads/487315654_642317125285410_8892634862952099235_n.jpg
+  - /uploads/483202057_663091966378560_2735022058092191043_n.jpg
+  - /uploads/chatgpt-image-jun-9-2026-07_27_46-am.png
 meta_description: Mesin pemasak-pengaduk otomatis baja nirkarat untuk memasak
   dan mengaduk dodol, jenang, selai, karamel, sambal, dan adonan kental secara
   merata.
