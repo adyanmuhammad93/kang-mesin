@@ -6,6 +6,7 @@ price: Hubungi Untuk Harga
 images:
   - /uploads/484065313_631737969676659_5715366598383651917_n.jpg
   - /uploads/484545466_631737863010003_9070069965925952984_n.jpg
+  - /uploads/715360521_122222861594446072_2257036354417549060_n.jpg
 meta_description: Mesin Giling Kedelai untuk Industri Tahu & Pengolahan Kedelai
 whatsapp_number: "+6281222397424"
 ---
