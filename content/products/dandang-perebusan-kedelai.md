@@ -1,5 +1,5 @@
 ---
-title: "Dandang Perebusan Kedelai "
+title: "Dandang Perebusan & Pencucian Kedelai "
 sku: SS
 category: Peralatan Produksi Makanan
 price: "Hubungi untuk Harga "
