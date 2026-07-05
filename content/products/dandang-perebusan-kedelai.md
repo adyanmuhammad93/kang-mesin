@@ -5,9 +5,9 @@ category: Peralatan Produksi Makanan
 price: "Hubungi untuk Harga "
 images:
   - /uploads/chatgpt-image-jul-5-2026-04_32_45-pm.png
-  - /uploads/chatgpt-image-jun-7-2026-01_34_24-pm.png
-  - /uploads/516316287_3147596865392307_2097430785856924337_n.jpg
-  - /uploads/486932980_643701015147021_8257372529076623841_n.jpg
+  - /uploads/1696505640169.jpg
+  - /uploads/1780395695212.jpg
+  - /uploads/1780395688966.jpg
 meta_description: Dandang Perebusan Kedelai Industri
 whatsapp_number: "+6281222397424"
 ---
