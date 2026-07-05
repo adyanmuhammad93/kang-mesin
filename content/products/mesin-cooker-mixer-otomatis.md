@@ -4,6 +4,7 @@ sku: MCMO-80-SS
 category: Mesin Industri Makanan
 price: Hubungi untuk harga
 images:
+  - /uploads/chatgpt-image-jul-5-2026-04_40_49-pm.png
   - /uploads/1716812286805.jpg
   - /uploads/screenshot_20230928-124512.jpg
   - /uploads/487315654_642317125285410_8892634862952099235_n.jpg
