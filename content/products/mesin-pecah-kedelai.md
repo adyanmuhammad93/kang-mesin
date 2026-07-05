@@ -4,9 +4,11 @@ sku: MPk -Sr
 category: Lainnya
 price: Hubungi untuk harga
 images:
+  - /uploads/725786830_1302111815324040_7929316144008266355_n.png
   - /uploads/chatgpt-image-jun-7-2026-11_00_12-am.png
   - /uploads/whatsapp-image-2026-06-03-at-19.28.24.jpeg
   - /uploads/whatsapp-image-2026-06-03-at-19.28.23.jpeg
+  - /uploads/89c8d0f3-7176-48fb-ad88-65372264c1b2.png
 meta_description: Mesin Pecah Kedelai dirancang untuk memecah biji kedelai
   sekaligus membantu memisahkan kulit ari dari biji kedelai secara lebih cepat
   dan efisien. Cocok digunakan untuk industri tempe, pengolahan kedelai, UMKM,
