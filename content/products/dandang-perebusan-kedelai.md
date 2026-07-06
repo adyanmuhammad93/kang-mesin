@@ -4,9 +4,9 @@ sku: SS
 category: Peralatan Produksi Makanan
 price: "Hubungi untuk Harga "
 images:
+  - /uploads/chatgpt-image-jul-6-2026-05_27_12-pm.png
   - /uploads/chatgpt-image-jul-5-2026-04_32_45-pm.png
   - /uploads/1696505640169.jpg
-  - /uploads/chatgpt-image-jul-6-2026-05_27_12-pm.png
   - /uploads/1780395695212.jpg
   - /uploads/1780395688966.jpg
 meta_description: Dandang Perebusan Kedelai Industri
