@@ -4,6 +4,7 @@ sku: BK-ss
 category: Lainnya
 price: Hubungi untuk Harga
 images:
+  - /uploads/chatgpt-image-jul-14-2026-12_07_54-pm.png
   - /uploads/486850367_644121035105019_2141610845535509894_n.jpg
   - /uploads/chatgpt-image-jun-7-2026-11_17_33-am.png
   - /uploads/481188880_623392203844569_4962292638671843646_n.jpg
