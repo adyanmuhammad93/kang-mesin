@@ -1,7 +1,7 @@
 ---
 title: Bak Pencucian Stainless Steel
 sku: BK-Ss
-category: Lainnya
+category: Peralatan Produksi Makanan
 price: Hubungi untuk harga
 images:
   - /uploads/chatgpt-image-jun-9-2026-07_48_05-am.png
