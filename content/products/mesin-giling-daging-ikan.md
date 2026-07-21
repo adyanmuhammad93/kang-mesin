@@ -3,7 +3,9 @@ title: "Mesin Giling Daging / Ikan "
 sku: MG /ss
 category: Peralatan Produksi Makanan
 price: ""
-images: []
+images:
+  - /uploads/chatgpt-image-jul-21-2026-06_15_42-pm.png
+  - /uploads/chatgpt-image-jul-21-2026-06_40_44-pm.png
 whatsapp_number: "081222397424"
 ---
 Mesin Giling Daging, Ikan & Bahan Sejenis
