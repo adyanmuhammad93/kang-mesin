@@ -1,9 +1,10 @@
 ---
-title: Jubung Uap Pengunyitan Tahu
+title: Jubung Pengunyitan Tahu
 sku: SS
 category: Mesin Industri Makanan
 price: ""
 images:
+  - /uploads/chatgpt-image-jul-24-2026-08_34_25-am.png
   - /uploads/chatgpt-image-jun-21-2026-07_16_30-am.png
 whatsapp_number: "081222397424"
 ---
