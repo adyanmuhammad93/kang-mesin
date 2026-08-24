@@ -1,23 +1,22 @@
 ---
-title: Jubung Pengunyitan Tahu
-sku: SS
+title: Jubung Pengunyitan Tahu 90cm
+sku: SS-90cm
 category: Mesin Industri Makanan
-price: ""
+price: 2.600.000
 images:
   - /uploads/chatgpt-image-jul-24-2026-08_34_25-am.png
   - /uploads/chatgpt-image-jun-21-2026-07_16_30-am.png
 whatsapp_number: "081222397424"
 ---
-**Jubung Uap Pengunyitan Tahu**
+Jubung Penguyitan Tahu / Penguning Tahu
 
-Tingkatkan kualitas produksi tahu Anda dengan **Jubung Uap Pengunyitan Tahu** yang dirancang untuk proses pemanasan dan pengunyitan kedelai secara lebih merata, cepat, dan higienis. Menggunakan sistem uap, proses pengolahan menjadi lebih efisien dengan suhu yang stabil sehingga membantu menghasilkan tahu yang lebih baik dan konsisten.
+Jubung penguyitan tahu (penguning) berbahan stainless steel, dirancang untuk membantu proses penguningan tahu agar lebih praktis, higienis, dan mudah dalam perawatan.
 
-✅ Pemanasan merata dan stabil
-✅ Proses produksi lebih cepat dan efisien
-✅ Material kuat dan higienis
-✅ Cocok untuk usaha tahu skala kecil hingga besar
-✅ Bisa custom ukuran sesuai kebutuhan produksi
+✅ Bahan stainless steel
+✅ Kokoh & tahan lama
+✅ Mudah dibersihkan
+✅ Cocok untuk produksi tahu skala UMKM maupun usaha produksi
+✅ Bisa custom ukuran dan kapasitas sesuai kebutuhan
 
-💡 Solusi tepat untuk meningkatkan kapasitas dan kualitas produksi tahu Anda!
-
-📞 Konsultasikan kebutuhan usaha Anda sekarang juga. Siap custom sesuai kapasitas produksi yang dibutuhkan! 🚀
+Ready juga Jubung Uang ,silahkan cek admin 
+KNG Mesin – Solusi Mesin & Peralatan Produksi Tahu.
