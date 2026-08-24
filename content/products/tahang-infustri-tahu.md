@@ -2,7 +2,7 @@
 title: "Tahang Industri Tahu "
 sku: TH-8090-SS
 category: Mesin Baja Nirkarat Aman Pangan
-price: Hubungi untuk harga
+price: 1.900.000
 images:
   - /uploads/chatgpt-image-jun-7-2026-10_57_17-am.png
   - /uploads/1696505640169.jpg
