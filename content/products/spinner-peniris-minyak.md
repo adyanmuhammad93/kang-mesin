@@ -2,7 +2,7 @@
 title: Mesin Peniris Minyak
 sku: SPN-50X60-SS
 category: Mesin Pengolahan Makanan Ringan
-price: Hubungi untuk harga
+price: 7.300.000
 images:
   - /uploads/487475939_644528735064249_4182952560093707673_n.jpg
   - /uploads/1716478222121.jpg
