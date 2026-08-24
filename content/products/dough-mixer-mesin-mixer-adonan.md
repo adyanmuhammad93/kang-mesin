@@ -2,7 +2,7 @@
 title: Mesin Pengaduk Adonan
 sku: DM-50-SS
 category: Mesin Pengaduk
-price: Hubungi untuk harga
+price: 8.800.000
 images:
   - /uploads/chatgpt-image-jul-6-2026-05_39_57-pm.png
   - /uploads/screenshot_20240925-112223.jpg
