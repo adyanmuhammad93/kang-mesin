@@ -1,5 +1,5 @@
 ---
-title: Mesin Blander 3-5kg
+title: Mesin Blander Rempah 3-5kg
 sku: SS-Bf
 category: Peralatan Produksi Makanan
 price: 3.650.000
