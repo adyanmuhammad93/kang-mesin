@@ -2,7 +2,7 @@
 title: "Mixer Adonan Cair /Liquid "
 sku: SM-s
 category: Mesin Pengaduk
-price: hubungi untuk harga
+price: 6.800.000
 images:
   - /uploads/chatgpt-image-jul-21-2026-06_20_29-pm.png
 specs: []
